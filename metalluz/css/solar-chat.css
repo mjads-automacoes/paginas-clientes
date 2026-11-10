@@ -1,0 +1,16 @@
+[data-component="blocks/form"]{border-radius:0 48px 0 48px;overflow:hidden}
+#solar-chat-launcher,#solar-chat-panel,#solar-chat-panel *{box-sizing:border-box}
+#solar-chat-launcher{position:fixed;right:24px;bottom:24px;z-index:9990;display:flex;align-items:center;justify-content:center;width:56px;height:56px;border:0;border-radius:50%;background:#111111;color:#fff;padding:0;box-shadow:0 6px 24px #11111140;font:700 14px/1.2 Arial,sans-serif;cursor:pointer}
+#solar-chat-launcher svg{width:24px;height:24px;flex:none}
+#solar-chat-launcher:hover{background:#2a2a2a}
+#solar-chat-launcher:focus-visible,#solar-chat-close:focus-visible{outline:3px solid #D7000F;outline-offset:4px}
+#solar-chat-panel{position:fixed;right:24px;bottom:94px;z-index:9991;width:400px;height:620px;max-height:calc(100dvh - 118px);max-width:calc(100vw - 32px);border-radius:22px;background:#fff;box-shadow:0 12px 50px #11111145;border:1px solid #dce1ec;overflow:hidden;display:flex;flex-direction:column}
+#solar-chat-panel[hidden]{display:none}
+#solar-chat-bar{display:flex;align-items:center;justify-content:space-between;background:#111111;color:white;padding:10px 14px;font:700 14px/1.3 Arial,sans-serif;flex:none}
+#solar-chat-close{display:flex;align-items:center;justify-content:center;width:34px;height:34px;border:0;border-radius:50%;background:#ffffff20;color:#fff;font:24px/1 Arial,sans-serif;cursor:pointer}
+#solar-chat-frame{display:block;width:100%;flex:1;min-height:0;border:0;background:#f5f8fb}
+#solar-chat-file-warning{margin:auto;padding:32px 24px;text-align:center;color:#111111;font:15px/1.5 Arial,sans-serif}
+#solar-chat-file-warning strong{display:block;font-size:18px;margin-bottom:8px}
+#solar-chat-file-warning p{margin:0 0 18px;color:#4b5563}
+#solar-chat-file-warning a{display:inline-block;border-radius:999px;background:#D7000F;color:#111111;padding:11px 18px;font-weight:700;text-decoration:none}
+@media(max-width:600px){#solar-chat-launcher{right:16px;bottom:max(16px,env(safe-area-inset-bottom));padding:0}#solar-chat-panel{left:16px;right:16px;bottom:88px;width:auto;max-width:none;height:calc(100dvh - 120px);max-height:680px;border-radius:18px}}

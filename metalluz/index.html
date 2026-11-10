@@ -1,0 +1,1347 @@
+<!DOCTYPE html>
+<html lang="pt-br" prefix="og: http://ogp.me/ns#" itemscope="" itemtype="http://schema.org/WebPage">
+  <head>
+    <meta charset="utf-8">
+    <!-- =============================================================
+      CONFIGURAÇÕES DA LP — EDITE SOMENTE OS VALORES ENTRE ASPAS
+      WhatsApp: código do país + DDD + número, somente dígitos.
+      Apps Script: URL pública terminada em /exec, que recebe os dados.
+      Para conectar uma nova planilha, siga integracao/COMO-CONFIGURAR.md.
+      O formulário do topo e o chat usam o mesmo endpoint do Apps Script.
+    ============================================================= -->
+    <script>
+      window.LP_CONFIG = {
+        whatsapp: '556199234092', // WhatsApp comercial da Metalluz (confirmar número).
+        mensagemWhatsapp: 'Olá, vim do site e gostaria de fazer uma simulação de energia solar!',
+        appsScriptUrl: 'https://script.google.com/macros/s/AKfycbz5nZADM4OPIbjGAdH9yiEtKX9BMgVpMpXgwh9TT1Xmg1cZmbJPX_ffCdvPrvSRVb3MLA/exec', // Sua implantação pública do Apps Script.
+        gtmId: 'GTM-WVRDQKQB', // ID do Google Tag Manager. Ex.: GTM-XXXXXXX
+        metaPixelId: '1657128572609294', // ID numérico do Meta Pixel.
+        chatAbrirAposSegundos: 60 // Use 0 para desativar a abertura automática.
+      };
+    </script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <link rel="canonical" href="/">
+    <title>Metalluz Energia Solar | Energia solar no Distrito Federal</title>
+    <meta name="description" content="Energia solar residencial no Distrito Federal: projeto, instalação e manutenção com equipamentos à pronta entrega. Simule grátis e reduza até 95% da sua conta de luz.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="/">
+    <meta property="og:title" content="Metalluz Energia Solar">
+    <meta property="og:description" content="Energia solar residencial no Distrito Federal: projeto, instalação e manutenção com equipamentos à pronta entrega. Simule grátis e reduza até 95% da sua conta de luz.">
+    <meta property="og:image" content="images/og-metalluz.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Metalluz Energia Solar">
+    <meta name="twitter:description" content="Energia solar residencial no Distrito Federal: projeto, instalação e manutenção com equipamentos à pronta entrega. Simule grátis e reduza até 95% da sua conta de luz.">
+    <meta name="twitter:image" content="images/og-metalluz.jpg">
+    <meta itemprop="name" content="Metalluz Energia Solar">
+    <meta itemprop="description" content="Energia solar residencial no Distrito Federal: projeto, instalação e manutenção com equipamentos à pronta entrega. Simule grátis e reduza até 95% da sua conta de luz.">
+    <meta itemprop="image" content="images/og-metalluz.jpg">
+    <meta name="theme-color" content="#111111">
+    <link rel="icon" type="image/png" href="images/energia-solar-favicon.png">
+    <script>
+      (function (w, d, s, l) {
+        var config = w.LP_CONFIG || {};
+        var gtmId = config.gtmId || '';
+
+        w[l] = w[l] || [];
+        w[l].push({
+          'gtm.start': new Date().getTime(),
+          event: 'gtm.js'
+        });
+
+        if (!gtmId) {
+          return;
+        }
+
+        var firstScript = d.getElementsByTagName(s)[0];
+        var tag = d.createElement(s);
+        var dataLayerSuffix = l !== 'dataLayer' ? '&l=' + l : '';
+
+        tag.async = true;
+        tag.src = 'https://www.googletagmanager.com/gtm.js?id=' + gtmId + dataLayerSuffix;
+        firstScript.parentNode.insertBefore(tag, firstScript);
+      })(window, document, 'script', 'dataLayer');
+    </script>
+    <script>
+      (function (w, d) {
+        var config = w.LP_CONFIG || {};
+        var metaPixelId = config.metaPixelId || '';
+
+        if (!metaPixelId) {
+          return;
+        }
+
+        !(function (f, b, e, v, n, t, s) {
+          if (f.fbq) {
+            return;
+          }
+
+          n = f.fbq = function () {
+            n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+          };
+
+          if (!f._fbq) {
+            f._fbq = n;
+          }
+
+          n.push = n;
+          n.loaded = true;
+          n.version = '2.0';
+          n.queue = [];
+          t = b.createElement(e);
+          t.async = true;
+          t.src = v;
+          s = b.getElementsByTagName(e)[0];
+          s.parentNode.insertBefore(t, s);
+        })(w, d, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+
+        w.fbq('init', metaPixelId);
+        w.fbq('track', 'PageView');
+      })(window, document);
+    </script>
+    <link rel="stylesheet" type="text/css" href="css/main.min.css">
+    <style>
+      .preloader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 9999;
+        background-color: #fff;
+      }
+
+      .preloader__bar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+      }
+
+      .preloader__bar__progress {
+        width: 0;
+        height: 100%;
+        background-color: #111111;
+      }
+
+      @keyframes button-pulse {
+        0% {
+          transform: scale(1);
+          box-shadow: 0 0 0 0 rgba(215, 0, 15, 0.55);
+        }
+
+        70% {
+          transform: scale(1.03);
+          box-shadow: 0 0 0 18px rgba(215, 0, 15, 0);
+        }
+
+        100% {
+          transform: scale(1);
+          box-shadow: 0 0 0 0 rgba(215, 0, 15, 0);
+        }
+      }
+
+      @keyframes button-shine {
+        0% {
+          left: -140%;
+        }
+
+        60%,
+        100% {
+          left: 140%;
+        }
+      }
+
+      .property-select {
+        position: relative;
+        width: 100%;
+        margin-bottom: 10px;
+        z-index: 12;
+      }
+
+      .property-select.is-open {
+        z-index: 30;
+      }
+
+      .property-select__trigger {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        min-height: 42px;
+        padding: 0 18px;
+        color: #17233b;
+        font-size: 14px;
+        text-align: left;
+        border: 2px solid #aaa;
+        border-radius: 999px;
+        background: #fff;
+        transition: border-color .2s ease, box-shadow .2s ease, background-color .2s ease;
+      }
+
+      .property-select__trigger:hover,
+      .property-select__trigger:focus-visible,
+      .property-select.is-open .property-select__trigger {
+        border-color: #111111;
+        box-shadow: 0 0 0 4px rgba(17, 17, 17, .1);
+        outline: none;
+      }
+
+      .property-select.is-invalid .property-select__trigger {
+        border-color: #d92d20;
+        box-shadow: 0 0 0 4px rgba(217, 45, 32, .1);
+      }
+
+      .property-select__arrow {
+        width: 9px;
+        height: 9px;
+        margin-left: 12px;
+        border-right: 2px solid #667085;
+        border-bottom: 2px solid #667085;
+        transform: rotate(45deg) translateY(-2px);
+        transition: transform .2s ease;
+      }
+
+      .property-select.is-open .property-select__arrow {
+        transform: rotate(225deg) translate(-2px, -2px);
+      }
+
+      .property-select__menu {
+        position: absolute;
+        top: calc(100% + 8px);
+        left: 0;
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #d0d5dd;
+        border-radius: 18px;
+        background: #fff;
+        box-shadow: 0 18px 45px rgba(17, 17, 17, .2);
+        max-height: 240px;
+        overflow-y: auto;
+      }
+
+      .property-select__option {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        padding: 11px 13px;
+        color: #17233b;
+        font-size: 14px;
+        font-weight: 600;
+        text-align: left;
+        border: 0;
+        border-radius: 12px;
+        background: transparent;
+        transition: color .15s ease, background-color .15s ease, transform .15s ease;
+      }
+
+      .property-select__option:hover,
+      .property-select__option:focus-visible {
+        color: #111111;
+        background: #f6eeee;
+        outline: none;
+        transform: translateX(2px);
+      }
+
+      .property-select__option[aria-selected="true"] {
+        color: #fff;
+        background: #111111;
+      }
+
+      .property-select__trigger:disabled {
+        color: #98a2b3;
+        cursor: not-allowed;
+        background: #f2f4f7;
+        box-shadow: none;
+      }
+
+      .location-selects {
+        display: grid;
+        grid-template-columns: 122px minmax(0, 1fr);
+        gap: 8px;
+        align-items: start;
+      }
+
+      .location-selects .property-select {
+        min-width: 0;
+      }
+
+      .location-selects .property-select__trigger {
+        min-height: 46px;
+        padding: 0 16px;
+        line-height: 1.15;
+      }
+
+      .location-selects [data-select-label] {
+        display: block;
+        min-width: 0;
+        white-space: normal;
+      }
+
+      @media (max-width: 420px) {
+        .location-selects {
+          grid-template-columns: 112px minmax(0, 1fr);
+        }
+
+        .location-selects .property-select__trigger {
+          padding: 0 13px;
+          font-size: 13px;
+        }
+      }
+
+      .solar-panel-decor {
+        position: absolute;
+        left: 0;
+        bottom: 10px;
+        display: block;
+        width: 245rem;
+        height: auto;
+        pointer-events: none;
+        user-select: none;
+        filter: drop-shadow(0 18px 18px rgba(17, 17, 17, .2));
+        z-index: 0;
+      }
+
+      @media (max-width: 980px) {
+        .solar-panel-decor {
+          display: none;
+        }
+      }
+    </style>
+  <link rel="stylesheet" href="css/solar-chat.css?v=20261022-6">
+</head>
+  <body id="index" class="pause-scroll">
+    <!-- Preencha o ID e descomente se quiser manter o fallback noscript do GTM -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WVRDQKQB" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- Preencha o ID e descomente se quiser manter o fallback noscript do Meta Pixel -->
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1657128572609294&ev=PageView&noscript=1"></noscript>
+    <div class="preloader">
+      <div class="preloader__bar">
+        <div class="preloader__bar__progress">
+        </div>
+      </div>
+    </div>
+    <a href="#goToContent" tabindex="1">
+      Ir para o conteúdo
+    </a>
+    <header data-component="templates/header">
+      <div class="container">
+        <div class="brand-lockup" aria-label="Metalluz Energia Solar"><img src="images/metalluz-logo.png" width="240" height="222" alt="Metalluz"><span>METALLUZ<small>Energia Solar</small></span></div>
+      </div>
+    </header>
+    <main id="goToContent">
+      <div data-component="pages/home">
+        <div data-component="sections/section-hero">
+          <div class="container">
+            <div class="box-text-img">
+              <div class="box-text" data-ani-type="fade-top">
+                <p class="hero-eyebrow">Energia solar no Distrito Federal</p>
+                <h2>
+                  Reduza em
+                  <br>
+                  <b>
+                    até 95%
+                  </b>
+                  a sua
+                  <br>
+                  conta de energia
+                </h2>
+                <p>
+                  Descubra o valor do seu
+                  <br>
+                  projeto de energia solar
+                  <br>
+                  com a nossa plataforma
+                  <br>
+                  de simulação
+                  <b>
+                    Gratuita.
+                  </b>
+                </p>
+              </div>
+              <img class="solar-panel-decor" src="images/placa-solar-hero.webp" width="900" height="910" alt="" aria-hidden="true">
+              <picture class="img-hero" data-ani-type="fade-top">
+                <img src="images/hero-equipe.webp?v=3" width="900" height="993" alt="Equipe da Metalluz">
+              </picture>
+            </div>
+            <div class="box-form" data-ani-type="fade-top">
+              <div data-component="blocks/form">
+                <h3>
+                  Simule seu projeto
+                </h3>
+                <form class="form-simulator">
+                  <input type="text" name="nome" placeholder="Nome*" required="" class="field-form">
+                  <input type="tel" name="celular" placeholder="Celular*" minlength="19" maxlength="19" required="" class="field-form celular-field input-tel">
+                  <input type="email" name="email" placeholder="Email*" required="" class="field-form">
+                  <div class="property-select" data-visual-select data-required data-select-name="tipo_imovel">
+                    <select name="tipo_imovel" hidden>
+                      <option value="">Tipo de imóvel*</option>
+                      <option value="Residência">Residência</option>
+                      <option value="Apartamento">Apartamento</option>
+                      <option value="Comércio">Comércio</option>
+                      <option value="Agronegócio">Agronegócio</option>
+                    </select>
+                    <button class="property-select__trigger" type="button" aria-haspopup="listbox" aria-expanded="false">
+                      <span data-select-label>Tipo de imóvel*</span>
+                      <span class="property-select__arrow" aria-hidden="true"></span>
+                    </button>
+                    <div class="property-select__menu" role="listbox" aria-label="Tipo de imóvel" hidden>
+                    </div>
+                  </div>
+                  <div class="location-selects">
+                    <div class="property-select" data-visual-select data-required data-select-name="estado">
+                      <select name="estado" hidden>
+                        <option value="">Estado*</option>
+                        <option value="AC">AC</option><option value="AL">AL</option><option value="AP">AP</option><option value="AM">AM</option>
+                        <option value="BA">BA</option><option value="CE">CE</option><option value="DF">DF</option><option value="ES">ES</option>
+                        <option value="GO">GO</option><option value="MA">MA</option><option value="MT">MT</option><option value="MS">MS</option>
+                        <option value="MG">MG</option><option value="PA">PA</option><option value="PB">PB</option><option value="PR">PR</option>
+                        <option value="PE">PE</option><option value="PI">PI</option><option value="RJ">RJ</option><option value="RN">RN</option>
+                        <option value="RS">RS</option><option value="RO">RO</option><option value="RR">RR</option><option value="SC">SC</option>
+                        <option value="SP">SP</option><option value="SE">SE</option><option value="TO">TO</option>
+                      </select>
+                      <button class="property-select__trigger" type="button" aria-haspopup="listbox" aria-expanded="false">
+                        <span data-select-label>Estado*</span>
+                        <span class="property-select__arrow" aria-hidden="true"></span>
+                      </button>
+                      <div class="property-select__menu" role="listbox" aria-label="Estado (UF)" hidden></div>
+                    </div>
+                    <div class="property-select" data-visual-select data-required data-select-name="cidade">
+                      <select name="cidade" hidden disabled>
+                        <option value="">Cidade*</option>
+                      </select>
+                      <button class="property-select__trigger" type="button" aria-haspopup="listbox" aria-expanded="false" disabled>
+                        <span data-select-label>Cidade*</span>
+                        <span class="property-select__arrow" aria-hidden="true"></span>
+                      </button>
+                      <div class="property-select__menu" role="listbox" aria-label="Cidade" hidden></div>
+                    </div>
+                  </div>
+                  <div class="box-consumption">
+                    <h4>
+                      Informe seu consumo
+                      <br>
+                      médio mensal:
+                    </h4>
+                    <div class="options-consumption">
+                      <label>
+                        <input type="radio" name="consumo" value="250_399" required="">
+                        <span class="txt-label">
+                          R$ 250 - R$ 399
+                        </span>
+                      </label>
+                      <label>
+                        <input type="radio" name="consumo" value="400_599" required="">
+                        <span class="txt-label">
+                          R$ 400 - R$ 599
+                        </span>
+                      </label>
+                      <label>
+                        <input type="radio" name="consumo" value="600_999" required="">
+                        <span class="txt-label">
+                          R$ 600 - R$ 999
+                        </span>
+                      </label>
+                      <label>
+                        <input type="radio" name="consumo" value="1000" required="">
+                        <span class="txt-label">
+                          Acima de R$ 1.000
+                        </span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="box-button">
+                    <button class="btn-default btn-calculate">
+                      <span class="btn-text">
+                        Calcular
+                      </span>
+                    </button>
+                  </div>
+                  <div class="loader">
+                    <img src="images/loader.gif" alt="">
+                  </div>
+                  <div class="msg-error">
+                    <p>
+                      Desculpe, Ocorreu um erro. Tente novamente.
+                    </p>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div data-component="sections/section-video-1">
+          <div class="container">
+            <h2 class="title-default" data-ani-type="fade-top" data-ani-group="video-1">
+              Entenda como funciona
+              <br>
+              o sistema de energia solar
+            </h2>
+            <div class="box-video" data-ani-type="fade-top" data-ani-group="video-1">
+              <a href="videos/energia-solar.mp4" data-fancybox="" class="thumb-video" aria-label="Vídeo Energia Solar">
+                <img src="images/video-thumb.jpg" width="750" height="421" alt="Thumb vídeo Energia Solar">
+                <span class="video-play-badge" aria-hidden="true">
+                  <img src="images/icon-play.webp" width="110" height="110" alt="">
+                </span>
+              </a>
+            </div>
+            <div data-ani-type="fade-top" data-ani-group="video-1">
+              <button type="button" data-go-to-form="" class="btn-default">
+                <span>
+                  Simular Grátis
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div data-component="sections/section-benefits">
+          <div class="container">
+            <h2 class="title-default" data-ani-type="fade-top" data-ani-group="beneficios">
+              Pronto para
+              <b>
+                economizar
+              </b>
+              ?
+              <br>
+              <b>
+                Simule
+              </b>
+              seu projeto agora mesmo!
+            </h2>
+            <div class="box-benefits">
+              <ul data-ani-type="fade-top" data-ani-group="beneficios">
+                <li>
+                  <img src="images/icon-independencia-energetica.webp" width="40" height="37" alt="ícone Independência energética" loading="lazy">
+                  <span>
+                    Independência energética
+                  </span>
+                </li>
+                <li>
+                  <img src="images/icon-energia-sustentavel.webp" width="40" height="37" alt="ícone Energia sustentável" loading="lazy">
+                  <span>
+                    Energia sustentável
+                  </span>
+                </li>
+                <li>
+                  <img src="images/icon-payback-atrativo.webp" width="40" height="37" alt="icone Payback super atrativo" loading="lazy">
+                  <span>
+                    Payback super atrativo
+                  </span>
+                </li>
+              </ul>
+              <img src="images/beneficios.webp" width="700" height="933" alt="Homem comemorando a economia na conta de luz diante de painéis solares" loading="lazy" data-ani-type="fade-top" data-ani-group="beneficios" class="img-center">
+              <ul data-ani-type="fade-top" data-ani-group="beneficios">
+                <li>
+                  <img src="images/icon-baixa-manutencao.webp" width="40" height="37" alt="ícone Baixa manutenção" loading="lazy">
+                  <span>
+                    Baixa manutenção
+                  </span>
+                </li>
+                <li>
+                  <img src="images/icon-livre-de-bandeiras.webp" width="40" height="37" alt="icone Livre de bandeiras" loading="lazy">
+                  <span>
+                    Livre de bandeiras
+                  </span>
+                </li>
+                <li>
+                  <img src="images/icon-vida-util.webp" width="40" height="37" alt="ícone Vida útil de 25 anos" loading="lazy">
+                  <span>
+                    Vida útil de 25 anos
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div data-component="sections/section-diferenciais" class="mz-diff">
+          <div class="mz-wrap">
+            <h2 class="title-default" data-ani-type="fade-top" data-ani-group="diferenciais">
+              Por que escolher a
+              <b>Metalluz</b>?
+            </h2>
+            <ul class="mz-cards" data-ani-type="fade-top" data-ani-group="diferenciais">
+              <li>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7.5 12 3l9 4.5v9L12 21l-9-4.5z"/><path d="M3 7.5 12 12l9-4.5M12 12v9"/></svg>
+                <h3>Pronta entrega</h3>
+                <p>Equipamentos disponíveis para começar o seu projeto sem esperar fornecedor.</p>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 2h6"/></svg>
+                <h3>Instalação ágil</h3>
+                <p>Já entregamos projeto completo em cerca de 15 dias, incluindo a aprovação da concessionária.*</p>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.2L3 17.8V21h3.2l6.3-6.3a4 4 0 0 0 5.2-5.4l-2.6 2.6-2.4-.6-.6-2.4z"/></svg>
+                <h3>Projeto completo</h3>
+                <p>Projeto, instalação e manutenção feitos pela nossa equipe, com cuidado técnico em cada estrutura.</p>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5.5" width="19" height="13" rx="2"/><path d="M2.5 10h19M6 15h4"/></svg>
+                <h3>Pagamento facilitado</h3>
+                <p>À vista, 50% de entrada e 50% na entrega ou financiamento com BTG, Santander e parceiros.**</p>
+              </li>
+            </ul>
+            <p class="mz-strip" data-ani-type="fade-top" data-ani-group="diferenciais">
+              <span>Desde 2017 em elétrica, automação e segurança eletrônica</span>
+              <span>Atendimento em todo o Distrito Federal e Goiás</span>
+            </p>
+            <p class="mz-notes">* O prazo depende da concessionária e de fatores externos. ** Sujeito a análise de crédito.</p>
+          </div>
+        </div>
+        <div data-component="sections/section-video-2">
+          <div class="container">
+            <h2 class="title-default" data-ani-type="fade-top" data-ani-group="video-2">
+              Vem para o time que
+              <br>
+              produz a própria
+              <b>
+                energia elétrica
+              </b>
+              !
+            </h2>
+            <div data-ani-type="fade-top" data-ani-group="video-2">
+              <button type="button" data-go-to-form="" class="btn-default">
+                <span>
+                  Quero economizar
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div class="lead-success-modal" aria-hidden="true" hidden>
+      <div class="lead-success-modal__backdrop" data-close-lead-modal=""></div>
+      <div class="lead-success-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="lead-success-title">
+        <button type="button" class="lead-success-modal__close" aria-label="Fechar pop-up" data-close-lead-modal="">
+          ×
+        </button>
+        <div class="lead-success-modal__badge">
+          <span>
+            ✓
+          </span>
+        </div>
+        <h3 id="lead-success-title" class="lead-success-modal__title">
+          Obrigado!
+        </h3>
+        <p class="lead-success-modal__text">
+          Recebemos suas informações. A equipe da <strong>Metalluz</strong> vai analisar seu pedido e entrar em contato em breve.
+        </p>
+        <div class="lead-success-modal__actions">
+          <button type="button" class="lead-success-modal__button lead-success-modal__button--secondary" data-close-lead-modal="">
+            Fechar
+          </button>
+          <a href="#" data-whatsapp-contact target="_blank" rel="noopener noreferrer" class="lead-success-modal__button lead-success-modal__button--primary">
+            <span class="lead-success-modal__button-icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32" role="presentation">
+                <path fill="currentColor" d="M19.11 17.28c-.29-.14-1.7-.84-1.96-.94-.26-.1-.45-.14-.64.14-.19.29-.74.94-.91 1.13-.17.19-.34.22-.63.08-.29-.14-1.2-.44-2.29-1.41-.85-.75-1.42-1.68-1.59-1.96-.17-.29-.02-.44.12-.58.13-.13.29-.34.43-.51.14-.17.19-.29.29-.48.1-.19.05-.36-.02-.51-.07-.14-.64-1.54-.88-2.11-.23-.55-.46-.48-.64-.49h-.55c-.19 0-.48.07-.74.36-.26.29-1 1-.95 2.43.05 1.43 1.02 2.8 1.16 3 .14.19 2 3.06 4.84 4.29.68.29 1.21.46 1.63.59.68.22 1.31.19 1.8.12.55-.08 1.7-.7 1.94-1.38.24-.68.24-1.26.17-1.38-.07-.12-.26-.19-.55-.34Z"/>
+                <path fill="currentColor" d="M16.02 3.2c-6.98 0-12.64 5.66-12.64 12.64 0 2.22.58 4.39 1.68 6.3L3.2 28.8l6.82-1.79a12.6 12.6 0 0 0 6 1.52h.01c6.97 0 12.64-5.67 12.64-12.64S22.99 3.2 16.02 3.2Zm0 23.2h-.01a10.5 10.5 0 0 1-5.34-1.46l-.38-.22-4.05 1.06 1.08-3.95-.25-.41a10.52 10.52 0 1 1 8.95 4.98Z"/>
+              </svg>
+            </span>
+            <span>
+              Falar com um especialista
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <footer data-component="templates/footer">
+      <div class="row-1">
+        <div class="brand-lockup brand-lockup--foot"><img src="images/metalluz-logo.png" width="240" height="222" alt="Metalluz"><span>METALLUZ<small>Energia Solar</small></span></div>
+      </div>
+      <div class="row-2">
+        <small>
+          2026 Metalluz - Todos os direitos reservados
+        </small>
+      </div>
+    </footer>
+    <script>
+      var base = "/";
+    </script>
+<!-- Energia Solar overrides -->
+    <style>
+      .btn-default {
+        overflow: hidden;
+        background-color: #D7000F !important;
+        animation: button-pulse 2s infinite;
+      }
+
+      .btn-default:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -140%;
+        width: 32%;
+        height: 100%;
+        background: linear-gradient(
+          100deg,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(255, 255, 255, 0.18) 35%,
+          rgba(255, 255, 255, 0.7) 50%,
+          rgba(255, 255, 255, 0.18) 65%,
+          rgba(255, 255, 255, 0) 100%
+        );
+        transform: skewX(-22deg);
+        pointer-events: none;
+        animation: button-shine 2.6s infinite;
+      }
+
+      .btn-default:before {
+        background-color: #A8000B !important;
+      }
+
+      .title-default,
+      .title-default b,
+      [data-component="blocks/form"] h3,
+      [data-component="blocks/form"] .form-simulator h4,
+      [data-component="blocks/form"] .form-simulator .row-radio-button,
+      [data-component="blocks/form"] .form-simulator .options-consumption label .txt-label,
+      [data-component="sections/section-hero"] .box-text-img .box-text h2 {
+        color: #111111 !important;
+      }
+
+      [data-component="sections/section-hero"] .box-text-img .box-text h2 b {
+        color: #D7000F !important;
+      }
+
+      [data-component="blocks/form"] .form-simulator .row-radio-button .box-radio label .radio-button:before {
+        background-color: #111111 !important;
+      }
+
+      [data-component="blocks/form"] .form-simulator .options-consumption label input:checked + .txt-label {
+        background-color: #D7000F !important;
+        color: #fff !important;
+      }
+
+      [data-component="sections/section-benefits"] .box-benefits ul li,
+      [data-component="templates/footer"] .row-2 {
+        background-color: #111111 !important;
+      }
+
+      [data-component="sections/section-video-2"] {
+        background-color: #111111 !important;
+        max-width: none;
+        width: 100%;
+        margin: 0;
+        padding: 28rem 20rem !important;
+      }
+
+      [data-component="sections/section-video-2"] .title-default,
+      [data-component="sections/section-video-2"] .title-default b {
+        color: #fff !important;
+        margin-bottom: 18rem !important;
+      }
+
+      [data-component="sections/section-hero"] {
+        background-image: linear-gradient(0deg, #111111 0, #6b6b6b 14%, #fff 43%, #fff 100%) !important;
+      }
+
+      .preloader__bar__progress {
+        background-color: #D7000F !important;
+      }
+
+      [data-component="sections/section-video-1"] .box-video {
+        margin-bottom: 24rem !important;
+      }
+
+      [data-component="sections/section-video-1"] .thumb-video {
+        display: block;
+        overflow: hidden;
+        border-radius: 34rem;
+      }
+
+      [data-component="sections/section-video-1"] .thumb-video > img:first-child {
+        display: block;
+        width: 100%;
+        transition: transform 0.35s ease, filter 0.35s ease;
+      }
+
+      [data-component="sections/section-video-1"] .thumb-video:before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg, rgba(17, 17, 17, 0.06) 0%, rgba(17, 17, 17, 0.2) 100%);
+        opacity: 0.8;
+        transition: opacity 0.35s ease;
+        pointer-events: none;
+      }
+
+      [data-component="sections/section-video-1"] .video-play-badge {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(1);
+        width: 110px;
+        height: 110px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 28px;
+        box-shadow: 0 14px 36px rgba(0, 0, 0, 0.28);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        animation: video-play-pulse 1.8s infinite;
+        z-index: 2;
+        pointer-events: none;
+      }
+
+      [data-component="sections/section-video-1"] .video-play-badge img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+      [data-component="sections/section-video-1"] .thumb-video:hover > img:first-child {
+        transform: scale(1.03);
+        filter: brightness(0.92);
+      }
+
+      [data-component="sections/section-video-1"] .thumb-video:hover:before {
+        opacity: 1;
+      }
+
+      [data-component="sections/section-video-1"] .thumb-video:hover .video-play-badge {
+        transform: translate(-50%, -50%) scale(1.1);
+        box-shadow: 0 20px 48px rgba(0, 0, 0, 0.38);
+      }
+
+      @keyframes video-play-pulse {
+        0% {
+          box-shadow: 0 14px 36px rgba(0, 0, 0, 0.28), 0 0 0 0 rgba(255, 255, 255, 0.22);
+        }
+
+        50% {
+          box-shadow: 0 18px 42px rgba(0, 0, 0, 0.34), 0 0 0 14px rgba(255, 255, 255, 0);
+        }
+
+        100% {
+          box-shadow: 0 14px 36px rgba(0, 0, 0, 0.28), 0 0 0 0 rgba(255, 255, 255, 0);
+        }
+      }
+
+      [data-component="sections/section-hero"] .box-text-img .box-text p {
+        max-width: 300px !important;
+        padding-right: 28px;
+      }
+
+      :root {
+        --lp-header-height: 104px;
+      }
+
+      [data-component="templates/header"] {
+        height: var(--lp-header-height);
+        box-sizing: border-box;
+        padding: 8px 0;
+        display: flex;
+        align-items: center;
+      }
+
+      main#goToContent {
+        padding-top: var(--lp-header-height);
+      }
+
+      html {
+        scroll-padding-top: var(--lp-header-height);
+      }
+
+      .top-logo {
+        display: block;
+        width: 205px;
+        height: auto;
+        max-width: 100%;
+        max-height: calc(var(--lp-header-height) - 16px);
+        object-fit: contain;
+        margin: 0 auto;
+      }
+
+      @media (max-width: 767px) {
+        :root {
+          --lp-header-height: 88px;
+        }
+
+        .top-logo {
+          width: 168px;
+        }
+      }
+
+      .logo-1 {
+        display: block !important;
+        width: 260px !important;
+        height: auto;
+        max-width: 100%;
+      }
+
+      .row-1 {
+        justify-content: center !important;
+      }
+
+      .lead-success-modal {
+        position: fixed;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 24px;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition: opacity 0.1s ease, visibility 0.1s ease;
+        z-index: 10000;
+      }
+
+      .lead-success-modal[hidden] {
+        display: none !important;
+      }
+
+      .lead-success-modal.is-open {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+      }
+
+      .lead-success-modal__backdrop {
+        position: absolute;
+        inset: 0;
+        background: rgba(17, 17, 17, 0.58);
+        backdrop-filter: blur(4px);
+      }
+
+      .lead-success-modal__dialog {
+        width: min(100%, 660px);
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.98) 0%, #fafafa 100%);
+        border-radius: 28px;
+        padding: 42px 34px 32px;
+        text-align: center;
+        box-shadow: 0 28px 80px rgba(17, 17, 17, 0.24);
+        z-index: 1;
+        transform: translateY(8px) scale(0.99);
+        transition: transform 0.1s ease;
+      }
+
+      .lead-success-modal.is-open .lead-success-modal__dialog {
+        transform: translateY(0) scale(1);
+      }
+
+      .lead-success-modal__close {
+        position: absolute;
+        top: 14px;
+        right: 14px;
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        color: #111111;
+        font-size: 32px;
+        line-height: 1;
+        background: rgba(17, 17, 17, 0.08);
+      }
+
+      .lead-success-modal__badge {
+        width: 82px;
+        height: 82px;
+        margin: 0 auto 20px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #D7000F;
+        color: #fff;
+        box-shadow: 0 16px 36px rgba(215, 0, 15, 0.34);
+      }
+
+      .lead-success-modal__badge span {
+        font-size: 42px;
+        font-weight: 700;
+        line-height: 1;
+      }
+
+      .lead-success-modal__title {
+        margin-bottom: 14px;
+        font-size: 50rem;
+        line-height: 1;
+        font-weight: 900;
+        text-transform: uppercase;
+        color: #111111;
+      }
+
+      .lead-success-modal__text {
+        max-width: 470px;
+        margin: 0 auto 28px;
+        font-size: 28rem;
+        line-height: 1.45;
+        color: #4a4a4f;
+      }
+
+      .lead-success-modal__actions {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+      }
+
+      .lead-success-modal__button {
+        min-height: 72px;
+        border-radius: 18px;
+        padding: 16px 18px;
+        font-size: 20rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        white-space: nowrap;
+        transition: transform 0.22s ease, box-shadow 0.22s ease, background-color 0.22s ease;
+      }
+
+      .lead-success-modal__button-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 28px;
+        height: 28px;
+        flex: 0 0 28px;
+        margin-right: 2px;
+      }
+
+      .lead-success-modal__button-icon svg {
+        display: block;
+        width: 100%;
+        height: 100%;
+        transform: translateY(1px);
+      }
+
+      .lead-success-modal__button:hover {
+        transform: translateY(-2px);
+      }
+
+      .lead-success-modal__button--secondary {
+        color: #111111;
+        background: rgba(17, 17, 17, 0.14);
+        font-size: 24rem;
+        font-weight: 900;
+      }
+
+      .lead-success-modal__button--secondary:hover {
+        background: rgba(17, 17, 17, 0.2);
+      }
+
+      .lead-success-modal__button--primary {
+        color: #fff;
+        background: linear-gradient(135deg, #111111 0%, #3a3a3a 100%);
+        box-shadow: 0 14px 28px rgba(17, 17, 17, 0.2);
+        overflow: hidden;
+        animation: button-pulse 2s infinite;
+      }
+
+      .lead-success-modal__button--primary:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -140%;
+        width: 32%;
+        height: 100%;
+        background: linear-gradient(
+          100deg,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(255, 255, 255, 0.18) 35%,
+          rgba(255, 255, 255, 0.7) 50%,
+          rgba(255, 255, 255, 0.18) 65%,
+          rgba(255, 255, 255, 0) 100%
+        );
+        transform: skewX(-22deg);
+        pointer-events: none;
+        animation: button-shine 2.6s infinite;
+      }
+
+      .lead-success-modal__button--primary:hover {
+        box-shadow: 0 18px 34px rgba(17, 17, 17, 0.28);
+      }
+
+      body.modal-opened {
+        overflow: hidden;
+      }
+
+      @media (max-width: 767px) {
+        .lead-success-modal__dialog {
+          padding: 36px 22px 22px;
+          border-radius: 24px;
+        }
+
+        .lead-success-modal__title {
+          font-size: 34rem;
+        }
+
+        .lead-success-modal__text {
+          font-size: 20rem;
+          margin-bottom: 22px;
+        }
+
+        .lead-success-modal__button {
+          min-height: 60px;
+          font-size: 17rem;
+          white-space: normal;
+        }
+
+        .lead-success-modal__button--secondary {
+          font-size: 20rem;
+        }
+      }
+
+      /* Metalluz */
+      .brand-lockup{display:flex;align-items:center;justify-content:center;gap:12px;text-decoration:none;color:#111111;margin:0 auto;width:max-content}
+      .brand-lockup img{width:auto;height:64px}
+      .brand-lockup span{font-family:Montserrat,Arial,sans-serif;font-weight:800;font-size:26px;letter-spacing:.06em;line-height:1}
+      .brand-lockup small{display:block;margin-top:5px;font-weight:700;font-size:11px;letter-spacing:.32em;color:#D7000F}
+      .brand-lockup--foot img{height:72px}
+      @media (max-width:767px){.brand-lockup img{height:52px}.brand-lockup span{font-size:21px}.brand-lockup small{font-size:9.5px}}
+      [data-component="sections/section-hero"] .box-text-img .box-text p.hero-eyebrow{display:inline-flex;align-items:center;gap:10px;margin:0 0 16px;padding:8px 14px 8px 12px;border-radius:3px;background:#111111;border-left:3px solid #D7000F;color:#fff;font-family:Montserrat,Arial,sans-serif;font-weight:600;font-size:12px;line-height:1.3;letter-spacing:.16em;text-transform:uppercase;max-width:none!important;width:max-content!important;white-space:nowrap}
+      [data-component="sections/section-hero"] .box-text-img .box-text p.hero-eyebrow::before{content:"";flex:none;width:6px;height:6px;background:#D7000F;transform:rotate(45deg)}
+      .mz-diff{background:#f4f4f4;padding:72px 20px 64px}
+      .mz-wrap{max-width:1120px;margin:0 auto;text-align:center}
+      .mz-cards{list-style:none;margin:36px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;text-align:left}
+      .mz-cards li{background:#fff;border-radius:22px;padding:26px 22px;box-shadow:0 14px 34px -22px rgba(17,17,17,.35);border-top:4px solid #D7000F;transition:transform .2s ease}
+      .mz-cards li:hover{transform:translateY(-3px)}
+      .mz-cards svg{width:34px;height:34px;fill:none;stroke:#D7000F;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+      .mz-cards h3{margin:14px 0 8px;font-family:Montserrat,Arial,sans-serif;font-weight:800;font-size:19px;color:#111111;text-transform:uppercase}
+      .mz-cards p{margin:0;font-family:Montserrat,Arial,sans-serif;font-size:15px;line-height:1.5;color:#4a4a4f}
+      .mz-strip{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:30px 0 0}
+      .mz-strip span{padding:10px 18px;border-radius:999px;background:#111111;color:#fff;font-family:Montserrat,Arial,sans-serif;font-weight:700;font-size:14px}
+      .mz-notes{margin:16px 0 0;font-family:Montserrat,Arial,sans-serif;font-size:12px;color:#6b6b6b}
+      @media (max-width:980px){.mz-cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+      @media (max-width:767px){
+        [data-component="sections/section-hero"] .box-text-img .img-hero{top:6px;bottom:0;right:0;left:auto;width:calc(100% - 222px);max-width:300px;right:0}
+        [data-component="sections/section-hero"] .box-text-img .img-hero img{width:100%;height:100%;object-fit:contain;object-position:right bottom}
+        [data-component="sections/section-hero"] .box-text-img .box-text p.hero-eyebrow{white-space:normal;width:auto!important;max-width:100%!important;font-size:11px;letter-spacing:.13em}
+      }
+      @media (max-width:440px){
+        [data-component="sections/section-hero"] .box-text-img .box-text{max-width:196px}
+        [data-component="sections/section-hero"] .box-text-img .box-text h2{font-size:21px}
+        [data-component="sections/section-hero"] .box-text-img .box-text p{font-size:13.5px}
+        [data-component="sections/section-hero"] .box-text-img .box-text p.hero-eyebrow{white-space:normal;width:auto!important;max-width:100%!important;font-size:10px;letter-spacing:.12em;padding:7px 10px 7px 9px;gap:8px}
+        [data-component="sections/section-hero"] .box-text-img .img-hero{width:calc(100% - 186px);right:0}
+      }
+      @media (max-width:560px){.mz-diff{padding:56px 16px 48px}.mz-cards{grid-template-columns:1fr}.mz-strip span{font-size:13px}}
+    </style>
+    <script src="js/main.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        var form = document.querySelector('.form-simulator');
+        var modal = document.querySelector('.lead-success-modal');
+        var trackingConfig = window.LP_CONFIG || {};
+        var lastSubmittedData = null;
+        var sheetSynced = false;
+        var successTracked = false;
+
+        window.dataLayer = window.dataLayer || [];
+
+        if (!form) {
+          return;
+        }
+
+        function normalizePhone(value) {
+          return (value || '').replace(/\D+/g, '');
+        }
+
+        function pushDataLayer(payload) {
+          window.dataLayer.push(payload);
+        }
+
+        function trackMeta(eventName, params) {
+          if (!trackingConfig.metaPixelId || typeof window.fbq !== 'function') {
+            return;
+          }
+
+          window.fbq('trackCustom', eventName, params || {});
+        }
+
+        function safeValue(field) {
+          var name = field.name || '';
+          var type = (field.type || '').toLowerCase();
+
+          if (name === 'nome' || name === 'email' || name === 'celular') {
+            return field.value ? 'preenchido' : 'vazio';
+          }
+
+          if (type === 'radio') {
+            var checkedField = form.querySelector('[name="' + name + '"]:checked');
+            return checkedField ? checkedField.value : '';
+          }
+
+          return field.value || '';
+        }
+
+        function buildFormPayload() {
+          var consumoChecked = form.querySelector('[name="consumo"]:checked');
+
+          return {
+            submitted_at: new Date().toISOString(),
+            page_url: window.location.href,
+            nome: (form.querySelector('[name="nome"]') || {}).value || '',
+            celular: normalizePhone((form.querySelector('[name="celular"]') || {}).value || ''),
+            email: (form.querySelector('[name="email"]') || {}).value || '',
+            tipo_imovel: (form.querySelector('[name="tipo_imovel"]') || {}).value || '',
+            estado: (form.querySelector('[name="estado"]') || {}).value || '',
+            cidade: (form.querySelector('[name="cidade"]') || {}).value || '',
+            consumo: consumoChecked ? consumoChecked.value : ''
+          };
+        }
+
+        function pushFieldEvent(field, interactionType) {
+          if (!field.name) {
+            return;
+          }
+
+          var payload = {
+            event: 'energia_solar_form_field',
+            form_name: 'form_energia_solar',
+            field_name: field.name,
+            field_type: field.type || field.tagName.toLowerCase(),
+            interaction_type: interactionType,
+            field_value_safe: safeValue(field)
+          };
+
+          pushDataLayer(payload);
+          trackMeta('EnergiaSolarFormField', payload);
+        }
+
+        function trackLeadSuccess() {
+          if (successTracked) {
+            return;
+          }
+
+          successTracked = true;
+
+          var payload = {
+            event: 'energia_solar_form_success',
+            form_name: 'form_energia_solar'
+          };
+
+          pushDataLayer(payload);
+          trackMeta('EnergiaSolarLeadSuccess', {
+            form_name: 'form_energia_solar'
+          });
+        }
+
+        form.querySelectorAll('input, select').forEach(function (field) {
+          field.addEventListener('blur', function () {
+            pushFieldEvent(field, 'blur');
+          });
+
+          field.addEventListener('change', function () {
+            pushFieldEvent(field, 'change');
+          });
+        });
+
+        form.addEventListener('submit', function () {
+          lastSubmittedData = buildFormPayload();
+          sheetSynced = false;
+          successTracked = false;
+
+          var payload = {
+            event: 'energia_solar_form_submit_attempt',
+            form_name: 'form_energia_solar'
+          };
+
+          pushDataLayer(payload);
+          trackMeta('EnergiaSolarFormSubmitAttempt', {
+            form_name: 'form_energia_solar'
+          });
+        });
+
+        document.querySelectorAll('[data-go-to-form]').forEach(function (button, index) {
+          button.addEventListener('click', function () {
+            var payload = {
+              event: 'energia_solar_cta_click',
+              cta_name: 'quero_economizar',
+              cta_position: index + 1
+            };
+
+            pushDataLayer(payload);
+            trackMeta('EnergiaSolarCtaClick', payload);
+          });
+        });
+
+        document.querySelectorAll('[data-whatsapp-contact]').forEach(function (link) {
+          link.addEventListener('click', function () {
+            var payload = {
+              event: 'energia_solar_whatsapp_click',
+              destination: link.href
+            };
+
+            pushDataLayer(payload);
+            trackMeta('Contact', {
+              channel: 'whatsapp',
+              destination: link.href
+            });
+          });
+        });
+
+        if (modal) {
+          var modalObserver = new MutationObserver(function () {
+            if (modal.classList.contains('is-open')) {
+              trackLeadSuccess();
+            }
+          });
+
+          modalObserver.observe(modal, {
+            attributes: true,
+            attributeFilter: ['class']
+          });
+        }
+
+        if (window.jQuery) {
+          window.jQuery(document).on('lead.success', function () {
+            trackLeadSuccess();
+          });
+        }
+
+        document.addEventListener('lead.success', function () {
+          trackLeadSuccess();
+        });
+      });
+    </script>
+    <script>
+      (function () {
+        var modal = document.querySelector(".lead-success-modal");
+        if (!modal) {
+          return;
+        }
+
+        function closeLeadModal() {
+          modal.classList.remove("is-open");
+          modal.setAttribute("aria-hidden", "true");
+          modal.hidden = true;
+          document.body.classList.remove("modal-opened");
+        }
+
+        function openLeadModal() {
+          modal.hidden = false;
+          modal.classList.add("is-open");
+          modal.setAttribute("aria-hidden", "false");
+          document.body.classList.add("modal-opened");
+        }
+
+        document.addEventListener("click", function (event) {
+          if (event.target.closest("[data-close-lead-modal]")) {
+            closeLeadModal();
+          }
+        });
+
+        document.addEventListener("keydown", function (event) {
+          if (event.key === "Escape") {
+            closeLeadModal();
+          }
+        });
+
+        $(document).on("lead.success", function () {
+          openLeadModal();
+        });
+      })();
+    </script>
+  <script src="js/lead-form.js?v=20261022-7" defer></script>
+  <script src="js/solar-chat.js?v=20261022-6" defer></script>
+</body>
+</html>
