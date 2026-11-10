@@ -45,6 +45,10 @@ jobs:
           for d in ${{ steps.pastas.outputs.lista }}; do
             echo "=== $d"
             vercel project add "$d" --token "$VERCEL_TOKEN" --scope "$SCOPE" >/dev/null 2>&1 || true
-            (cd "$d" && vercel link --yes --project "$d" --token "$VERCEL_TOKEN" --scope "$SCOPE" >/dev/null \
-              && vercel deploy --prod --yes --token "$VERCEL_TOKEN" --scope "$SCOPE")
+            if ! (cd "$d" && vercel link --yes --project "$d" --token "$VERCEL_TOKEN" --scope "$SCOPE" >/dev/null \
+              && vercel deploy --prod --yes --token "$VERCEL_TOKEN" --scope "$SCOPE"); then
+              # projeto com Root Directory configurado: publica a partir da raiz do repositório
+              rm -rf .vercel && vercel link --yes --project "$d" --token "$VERCEL_TOKEN" --scope "$SCOPE" >/dev/null \
+                && vercel deploy --prod --yes --token "$VERCEL_TOKEN" --scope "$SCOPE"; rm -rf .vercel
+            fi
           done
