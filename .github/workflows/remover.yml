@@ -1,0 +1,16 @@
+name: Remover projeto da Vercel
+on:
+  workflow_dispatch:
+    inputs:
+      projeto:
+        description: "Nome do projeto na Vercel"
+        required: true
+jobs:
+  remover:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          code=$(curl -s -o r.txt -w '%{http_code}' -X DELETE \
+            -H "Authorization: Bearer ${{ secrets.VERCEL_TOKEN }}" \
+            "https://api.vercel.com/v9/projects/${{ github.event.inputs.projeto }}?slug=bk-24fb")
+          cat r.txt; echo "HTTP $code"; [ "$code" = 204 ] || [ "$code" = 200 ]
