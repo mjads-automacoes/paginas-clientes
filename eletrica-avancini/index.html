@@ -1,0 +1,634 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Mecânica Avancini | Oficina mecânica e auto elétrica em Joinville - SC</title>
+<meta name="description" content="Mecânica geral, elétrica automotiva, suspensão, freios, injeção eletrônica e ar-condicionado em Joinville - SC. Tudo o que seu carro precisa em um só lugar. Agende sua avaliação pelo WhatsApp.">
+<meta name="keywords" content="oficina mecânica em Joinville, auto elétrica Joinville, mecânica geral Joinville, suspensão automotiva Joinville, manutenção de freios Joinville, injeção eletrônica Joinville, ar-condicionado automotivo Joinville">
+<meta name="theme-color" content="#0E1218">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Mecânica Avancini | Mecânica, elétrica e ar-condicionado em Joinville">
+<meta property="og:description" content="Tudo o que seu carro precisa em um só lugar. Agende sua avaliação pelo WhatsApp.">
+<meta property="og:image" content="img/fachada.webp">
+<meta property="og:locale" content="pt_BR">
+<link rel="icon" href="img/favicon.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600;700&display=swap">
+<script>
+/* ============ RASTREAMENTO ============
+   Preencha os IDs. Recomendado: só o GTM, e configurar GA4, Google Ads e Meta Pixel dentro dele usando os eventos
+   "generate_lead" (envio do formulário) e "whatsapp_click" (clique em qualquer WhatsApp).
+   Sem GTM: preencha ga4Id / adsId + adsLabel / metaPixelId e o site dispara tudo sozinho. */
+window.TRACK={gtmId:"",ga4Id:"",adsId:"",adsLabel:"",metaPixelId:""};
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+(function(T){
+if(T.gtmId){dataLayer.push({"gtm.start":Date.now(),event:"gtm.js"});var s=document.createElement("script");s.async=1;s.src="https://www.googletagmanager.com/gtm.js?id="+T.gtmId;document.head.appendChild(s);}
+var gid=T.ga4Id||T.adsId;if(gid){var g=document.createElement("script");g.async=1;g.src="https://www.googletagmanager.com/gtag/js?id="+gid;document.head.appendChild(g);gtag("js",new Date());if(T.ga4Id)gtag("config",T.ga4Id);if(T.adsId)gtag("config",T.adsId);}
+if(T.metaPixelId){!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version="2.0";n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init",T.metaPixelId);fbq("track","PageView");}
+})(window.TRACK);
+/* UTMs + GCLID: guarda a origem do clique na primeira visita (90 dias) */
+(function(){try{var q=new URLSearchParams(location.search),k=["utm_source","utm_medium","utm_campaign","utm_term","utm_content","gclid","fbclid","gbraid","wbraid"],o={},has=0;
+k.forEach(function(x){var v=q.get(x);if(v){o[x]=v;has=1;}});
+if(has){o.ts=Date.now();localStorage.setItem("av_attr",JSON.stringify(o));}
+var a=JSON.parse(localStorage.getItem("av_attr")||"null");if(a&&Date.now()-a.ts>7776e6){localStorage.removeItem("av_attr");a=null;}
+window.ATTR=a||{};dataLayer.push(Object.assign({event:"attribution"},window.ATTR));}catch(e){window.ATTR={};}})();
+document.documentElement.classList.add("js");
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"AutoRepair","name":"Mecânica Avancini","alternateName":"Elétrica Avancini","telephone":"+55 47 9112-6813","image":"img/fachada.webp","address":{"@type":"PostalAddress","streetAddress":"Rua Paulino de Jesus, 119 - Vila Nova","addressLocality":"Joinville","addressRegion":"SC","addressCountry":"BR"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"08:00","closes":"12:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"13:30","closes":"18:00"}],"areaServed":"Joinville - SC"}
+</script>
+<style>
+:root{
+--bg:#0E1218;--bg-2:#141A22;--bg-3:#1B232D;--line:#253040;--line-2:#324052;
+--fg:#F3F5F8;--fg-2:#AEB8C6;--fg-3:#7B8797;
+--red:#E3242B;--red-2:#B5151B;--red-glow:rgba(227,36,43,.35);
+--wa:#25D366;
+--f-d:"Barlow Condensed","Arial Narrow",Arial,sans-serif;
+--f-t:"Barlow",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+--wrap:1240px;--g:max(20px,env(safe-area-inset-left,0px));
+--sec:clamp(84px,10vw,140px);--ease:cubic-bezier(.2,.7,.2,1);--hdr:80px;
+color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--hdr) + 12px)}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 17px/1.6 var(--f-t);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img,video{max-width:100%;display:block}
+a{color:inherit}
+button,input,select{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--red);outline-offset:3px}
+.wrap{max-width:calc(var(--wrap) + 40px);margin:0 auto;padding-inline:var(--g)}
+.skip{position:absolute;left:12px;top:-60px;z-index:100;background:var(--red);color:#fff;padding:10px 16px;font-weight:700}.skip:focus{top:12px}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;margin:0 0 16px;font:700 15px/1 var(--f-d);letter-spacing:.2em;text-transform:uppercase;color:var(--red)}
+.eyebrow svg{width:14px;height:14px}
+.h2{margin:0;font:800 clamp(40px,5.4vw,68px)/.95 var(--f-d);text-transform:uppercase;letter-spacing:.005em;text-wrap:balance}
+.h2 em{font-style:normal;color:var(--red)}
+.lead{margin:0;font-size:clamp(17px,1.35vw,19px);color:var(--fg-2);max-width:58ch}
+/* buttons */
+.btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 28px;border-radius:14px;border:0;cursor:pointer;text-decoration:none;white-space:nowrap;font:700 19px/1 var(--f-d);letter-spacing:.06em;text-transform:uppercase;color:#fff;background:linear-gradient(180deg,#F0393F,var(--red) 55%,var(--red-2));box-shadow:inset 0 1px 0 rgba(255,255,255,.3),0 16px 32px -14px var(--red-glow);overflow:hidden;transition:transform .22s var(--ease),box-shadow .22s}
+.btn::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.28) 50%,transparent 70%);transform:translateX(-120%);transition:transform .7s var(--ease)}
+.btn:hover{transform:translateY(-2px);box-shadow:inset 0 1px 0 rgba(255,255,255,.3),0 22px 40px -14px rgba(227,36,43,.55)}
+.btn:hover::after{transform:translateX(120%)}
+.btn:active{transform:scale(.98)}
+.btn svg{width:20px;height:20px;flex:none}
+.btn--ghost{background:rgba(255,255,255,.04);border:1.5px solid rgba(255,255,255,.2);box-shadow:none}
+.btn--ghost:hover{background:#fff;color:var(--bg);box-shadow:none}
+.btn--wa{background:linear-gradient(180deg,#34E07A,var(--wa) 60%,#1DA851);box-shadow:inset 0 1px 0 rgba(255,255,255,.35),0 16px 32px -14px rgba(37,211,102,.5)}
+/* header */
+.top{position:fixed;inset:0 0 auto;z-index:50;transition:background .3s,border-color .3s,box-shadow .3s;border-bottom:1px solid transparent}
+.top.solid{background:rgba(14,18,24,.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-color:var(--line)}
+.top .wrap{height:var(--hdr);display:flex;align-items:center;gap:32px}
+.brand img{height:50px;width:auto}
+.nav{display:flex;gap:30px;margin-left:auto}
+.nav a{font:600 18px/1 var(--f-d);letter-spacing:.08em;text-transform:uppercase;text-decoration:none;color:var(--fg-2);padding:8px 0;position:relative;transition:color .2s}
+.nav a::after{content:"";position:absolute;left:0;right:0;bottom:2px;height:2px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .25s var(--ease)}
+.nav a:hover{color:var(--fg)}.nav a:hover::after{transform:none}
+.top .btn{min-height:46px;padding:0 20px;font-size:17px}
+.menu-btn{display:none;width:46px;height:46px;border-radius:12px;background:rgba(255,255,255,.04);border:1px solid var(--line-2);cursor:pointer}
+.menu-btn span{display:block;width:18px;height:2px;background:var(--fg);margin:4px auto;transition:transform .2s}
+.menu-btn[aria-expanded="true"] span:first-child{transform:translateY(3px) rotate(45deg)}
+.menu-btn[aria-expanded="true"] span:last-child{transform:translateY(-3px) rotate(-45deg)}
+.mmenu{display:none}
+/* hero */
+.hero{position:relative;isolation:isolate;padding-top:var(--hdr);min-height:min(100svh,980px);display:flex;align-items:center;overflow:hidden}
+.hero__bg{position:absolute;inset:0;z-index:-2}
+.hero__bg img{width:100%;height:100%;object-fit:cover;object-position:50% 40%;transform:scale(1.06);animation:kb 18s ease-out both}
+@keyframes kb{to{transform:scale(1)}}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(14,18,24,.97) 0%,rgba(14,18,24,.9) 40%,rgba(14,18,24,.55) 75%,rgba(14,18,24,.4)),linear-gradient(0deg,var(--bg),transparent 30%)}
+.hero__grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(40px,5vw,84px);align-items:center;padding-block:clamp(40px,6vw,80px)}
+.hero h1{margin:0;font:800 clamp(52px,6.4vw,92px)/.9 var(--f-d);text-transform:uppercase;letter-spacing:.005em;text-wrap:balance}
+.hero h1 em{font-style:normal;color:var(--red);display:inline-flex;align-items:center}
+.hero h1 .bolt{display:inline-block;width:.42em;height:.62em;margin:0 .02em;vertical-align:-.04em;fill:var(--red);filter:drop-shadow(0 0 18px rgba(227,36,43,.6))}
+.hero .lead{margin-top:24px;color:#C9D1DC}
+.hero__cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.trust{list-style:none;margin:36px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:10px}
+.trust li{display:inline-flex;align-items:center;gap:8px;padding:9px 14px 9px 10px;border-radius:999px;background:rgba(255,255,255,.05);border:1px solid var(--line-2);font-weight:600;font-size:14px;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.trust svg{width:16px;height:16px;color:var(--red)}
+[data-in]{animation:up .8s var(--ease) both}
+[data-in="2"]{animation-delay:.08s}[data-in="3"]{animation-delay:.16s}[data-in="4"]{animation-delay:.24s}[data-in="5"]{animation-delay:.32s}
+@keyframes up{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+/* lead form */
+.lead-card{position:relative;padding:clamp(24px,2.6vw,36px);border-radius:24px;background:linear-gradient(180deg,rgba(27,35,45,.94),rgba(20,26,34,.96));border:1px solid var(--line-2);box-shadow:0 40px 80px -30px rgba(0,0,0,.8);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.lead-card::before{content:"";position:absolute;left:24px;right:24px;top:-1px;height:3px;border-radius:0 0 4px 4px;background:var(--red);box-shadow:0 0 24px var(--red)}
+.lead-card h2{margin:0;font:800 34px/1 var(--f-d);text-transform:uppercase}
+.lead-card h2 em{font-style:normal;color:var(--red)}
+.lead-card>p{margin:10px 0 22px;color:var(--fg-2);font-size:15.5px}
+.field{display:block;margin-bottom:14px}
+.field>span{display:block;margin-bottom:7px;font:700 14px/1 var(--f-d);letter-spacing:.12em;text-transform:uppercase;color:var(--fg-2)}
+.field>span b{color:var(--red)}
+.ctrl{position:relative}
+.ctrl svg{position:absolute;left:15px;top:50%;width:18px;height:18px;transform:translateY(-50%);color:var(--fg-3);pointer-events:none;transition:color .2s}
+.ctrl input,.ctrl select{width:100%;height:54px;padding:0 16px 0 44px;border-radius:12px;background:var(--bg);border:1.5px solid var(--line-2);font-size:16px;outline:none;transition:border-color .2s,box-shadow .2s;appearance:none;-webkit-appearance:none}
+.ctrl select{padding-right:42px;cursor:pointer;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23AEB8C6' stroke-width='2.2'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;background-size:18px}
+.ctrl select:invalid{color:var(--fg-3)}
+.ctrl select option,.ctrl select optgroup{background:var(--bg-2);color:var(--fg)}
+.ctrl input::placeholder{color:var(--fg-3)}
+.ctrl input:focus,.ctrl select:focus{border-color:var(--red);box-shadow:0 0 0 4px rgba(227,36,43,.15)}
+.ctrl:focus-within svg{color:var(--red)}
+.field.err .ctrl input,.field.err .ctrl select{border-color:#FF5A5F}
+.field .msg{display:none;margin-top:6px;font-size:13px;color:#FF7A7E}
+.field.err .msg{display:block}
+.lead-card .btn{width:100%;margin-top:8px;min-height:60px}
+.lead-card .note{display:flex;align-items:center;justify-content:center;gap:8px;margin:14px 0 0;font-size:13px;color:var(--fg-3)}
+.lead-card .note svg{width:14px;height:14px}
+.lead-card.flash{animation:flash 1.1s var(--ease)}
+@keyframes flash{30%{box-shadow:0 0 0 4px rgba(227,36,43,.45),0 40px 80px -30px rgba(0,0,0,.8)}}
+/* marquee */
+.ticker{border-block:1px solid var(--line);background:var(--red);overflow:hidden;white-space:nowrap}
+.ticker__in{display:inline-flex;gap:0;animation:tick 32s linear infinite}
+.ticker span{display:inline-flex;align-items:center;gap:22px;padding:16px 22px 16px 0;font:800 24px/1 var(--f-d);letter-spacing:.06em;text-transform:uppercase;color:#fff}
+.ticker span svg{width:16px;height:20px;fill:#fff;opacity:.85}
+@keyframes tick{to{transform:translateX(-50%)}}
+/* services */
+.services{padding-block:var(--sec)}
+.sec-head{display:flex;justify-content:space-between;align-items:end;gap:32px;margin-bottom:40px}
+.tabs{display:inline-flex;padding:5px;border-radius:16px;background:var(--bg-2);border:1px solid var(--line);gap:4px}
+.tabs button{white-space:nowrap;display:inline-flex;align-items:center;gap:9px;min-height:50px;padding:0 22px;border:0;border-radius:12px;background:transparent;cursor:pointer;font:700 18px/1 var(--f-d);letter-spacing:.08em;text-transform:uppercase;color:var(--fg-2);transition:background .25s,color .25s}
+.tabs button svg{width:18px;height:18px}
+.tabs button[aria-selected="true"]{background:var(--red);color:#fff;box-shadow:0 10px 24px -10px var(--red-glow)}
+.panel{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.panel[hidden]{display:none}
+.panel.show .card{animation:up .55s var(--ease) both}
+.panel.show .card:nth-child(2){animation-delay:.07s}.panel.show .card:nth-child(3){animation-delay:.14s}
+.card{position:relative;display:flex;flex-direction:column;border-radius:22px;overflow:hidden;background:var(--bg-2);border:1px solid var(--line);transition:transform .3s var(--ease),border-color .3s,box-shadow .3s}
+.card:hover{transform:translateY(-4px);border-color:rgba(227,36,43,.5);box-shadow:0 30px 50px -30px rgba(227,36,43,.35)}
+.card figure{margin:0;aspect-ratio:4/3.6;overflow:hidden;position:relative}
+.card figure img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease)}
+.card:hover figure img{transform:scale(1.05)}
+.card figure::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,var(--bg-2))}
+.card__ico{position:absolute;left:20px;top:20px;z-index:1;width:46px;height:46px;border-radius:13px;display:grid;place-items:center;background:rgba(14,18,24,.75);border:1px solid var(--line-2);color:#fff;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.card__ico svg{width:22px;height:22px}
+.card__body{display:flex;flex-direction:column;flex:1;padding:0 24px 24px;margin-top:-40px;position:relative}
+.card h3{margin:0;font:800 30px/1 var(--f-d);text-transform:uppercase}
+.card p{margin:12px 0 20px;color:var(--fg-2);font-size:16px;line-height:1.55;flex:1}
+.card ul{list-style:none;margin:-6px 0 20px;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.card ul li{padding:5px 10px;border-radius:999px;background:var(--bg-3);border:1px solid var(--line);font-size:13px;color:var(--fg-2)}
+.card .pick{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:52px;padding:0 18px;border-radius:12px;border:1.5px solid var(--line-2);background:transparent;cursor:pointer;font:700 17px/1 var(--f-d);letter-spacing:.08em;text-transform:uppercase;color:var(--fg);transition:background .25s,border-color .25s,color .25s}
+.card .pick svg{width:18px;height:18px;transition:transform .25s var(--ease)}
+.card .pick:hover{background:var(--red);border-color:var(--red)}
+.card .pick:hover svg{transform:translateX(4px)}
+.no-cambio{margin:22px 0 0;font-size:14px;color:var(--fg-3);display:flex;align-items:center;gap:8px}
+.no-cambio svg{width:16px;height:16px}
+/* about */
+.about{padding-block:var(--sec);background:var(--bg-2);border-block:1px solid var(--line)}
+.about__grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(40px,6vw,96px);align-items:center}
+.player{position:relative;margin:0;aspect-ratio:9/16;max-height:720px;border-radius:24px;overflow:hidden;background:var(--bg-3);border:1px solid var(--line-2)}
+.player video{width:100%;height:100%;object-fit:cover}
+.player__play{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:14px;padding:28px;border:0;cursor:pointer;color:#fff;background:linear-gradient(180deg,rgba(14,18,24,0) 40%,rgba(14,18,24,.9));font:700 17px/1 var(--f-d);letter-spacing:.18em;text-transform:uppercase}
+.player__play i{display:grid;place-items:center;width:78px;height:78px;border-radius:50%;background:var(--red);box-shadow:0 0 0 10px rgba(227,36,43,.2);animation:ring 2.4s ease-in-out infinite}
+@keyframes ring{50%{box-shadow:0 0 0 18px rgba(227,36,43,0)}}
+.player__play svg{width:28px;height:28px;margin-left:4px}
+.player.playing .player__play{display:none}
+.about__text{margin-top:24px;display:grid;gap:16px;color:var(--fg-2);max-width:60ch}
+.about__text p{margin:0}.about__text strong{color:var(--fg)}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:36px}
+.stats div{padding:20px;border-radius:18px;background:var(--bg);border:1px solid var(--line)}
+.stats b{display:block;font:800 44px/1 var(--f-d);color:#fff}
+.stats b em{font-style:normal;color:var(--red)}
+.stats span{display:block;margin-top:8px;font-size:14px;color:var(--fg-2);line-height:1.35}
+.about .btn{margin-top:32px}
+/* differentials */
+.diffs{padding-block:var(--sec)}
+.diffs__grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:18px;margin-top:48px}
+.diff{grid-column:span 2;position:relative;padding:30px 26px;border-radius:22px;background:var(--bg-2);border:1px solid var(--line);overflow:hidden;transition:border-color .3s,transform .3s var(--ease)}
+.diff:nth-child(4),.diff:nth-child(5){grid-column:span 3}
+.diff:hover{border-color:rgba(227,36,43,.5);transform:translateY(-3px)}
+.diff::after{content:attr(data-n);position:absolute;right:18px;top:6px;font:800 92px/1 var(--f-d);color:rgba(255,255,255,.035)}
+.diff i{display:grid;place-items:center;width:52px;height:52px;border-radius:15px;background:rgba(227,36,43,.12);border:1px solid rgba(227,36,43,.35);color:var(--red);margin-bottom:20px}
+.diff i svg{width:24px;height:24px}
+.diff h3{margin:0 0 8px;font:800 28px/1 var(--f-d);text-transform:uppercase}
+.diff p{margin:0;color:var(--fg-2);font-size:16px}
+/* steps */
+.steps{padding-block:0 var(--sec)}
+.steps__box{position:relative;padding:clamp(32px,4vw,56px);border-radius:28px;background:radial-gradient(70% 120% at 100% 0%,rgba(227,36,43,.18),transparent 60%),var(--bg-2);border:1px solid var(--line);overflow:hidden}
+.steps__grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:40px;counter-reset:s}
+.step{position:relative;padding-top:20px;border-top:2px solid var(--line-2)}
+.step::before{counter-increment:s;content:"0" counter(s);display:block;font:800 54px/1 var(--f-d);color:var(--red);margin-bottom:12px}
+.step h3{margin:0 0 6px;font:800 26px/1 var(--f-d);text-transform:uppercase}
+.step p{margin:0;color:var(--fg-2);font-size:16px}
+.steps__cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:40px}
+/* gallery */
+.gallery{padding-block:var(--sec);background:var(--bg-2);border-block:1px solid var(--line)}
+.bento{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:220px;gap:14px;margin-top:44px}
+.bento figure{position:relative;margin:0;border-radius:18px;overflow:hidden;background:var(--bg-3);cursor:zoom-in}
+.bento figure img,.bento figure video{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease)}
+.bento figure:hover img,.bento figure:hover video{transform:scale(1.05)}
+.bento figcaption{position:absolute;left:12px;bottom:12px;padding:7px 12px;border-radius:999px;background:rgba(14,18,24,.8);font:700 14px/1 var(--f-d);letter-spacing:.1em;text-transform:uppercase;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.b-tall{grid-row:span 2}.b-wide{grid-column:span 2}
+.lb{position:fixed;inset:0;z-index:90;display:none;place-items:center;padding:24px;background:rgba(5,7,10,.92)}
+.lb.open{display:grid}
+.lb img{max-height:88vh;max-width:min(1100px,100%);border-radius:14px}
+.lb button{position:absolute;right:20px;top:20px;width:48px;height:48px;border-radius:50%;border:1px solid var(--line-2);background:var(--bg-2);color:#fff;font-size:26px;cursor:pointer}
+/* reviews */
+.reviews{padding-block:var(--sec)}
+.reviews[hidden]{display:none}
+.rv-track{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin-top:40px}
+.rv-track::-webkit-scrollbar{display:none}
+.rv{flex:0 0 calc((100% - 32px)/3);scroll-snap-align:start;padding:26px;border-radius:20px;background:var(--bg-2);border:1px solid var(--line);display:flex;flex-direction:column;gap:14px}
+.rv .st{color:#FBBC05;letter-spacing:2px}
+.rv p{margin:0;flex:1}
+.rv footer{display:flex;align-items:center;gap:12px;font-weight:700}
+.rv footer i{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--red);font:800 18px/1 var(--f-d);font-style:normal}
+/* final */
+.final{position:relative;isolation:isolate;overflow:hidden;padding-block:clamp(96px,11vw,150px)}
+.final video{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover}
+.final::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(14,18,24,.97),rgba(14,18,24,.85) 50%,rgba(14,18,24,.55))}
+.final__in{max-width:680px}
+.final .lead{margin-top:20px;color:#C9D1DC}
+.final .hero__cta{margin-top:34px}
+/* location */
+.loc{padding-block:var(--sec)}
+.loc__grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(24px,3vw,40px);margin-top:44px}
+.map{position:relative;min-height:460px;border-radius:22px;overflow:hidden;background:var(--bg-3);border:1px solid var(--line)}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0;z-index:2;filter:grayscale(.3) contrast(1.05)}
+.map__fb{position:absolute;inset:0}
+.map__fb img{width:100%;height:100%;object-fit:cover;filter:brightness(.5)}
+.map__card{position:absolute;left:22px;right:22px;bottom:22px;z-index:3;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:18px 20px;border-radius:16px;background:rgba(20,26,34,.94);border:1px solid var(--line-2);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.map__card b{display:block;font:800 22px/1.1 var(--f-d);text-transform:uppercase}
+.map__card span{color:var(--fg-2);font-size:15px}
+.map__card .btn{min-height:48px;font-size:16px;padding:0 18px}
+.info{padding:clamp(24px,3vw,36px);border-radius:22px;background:var(--bg-2);border:1px solid var(--line)}
+.info ul{list-style:none;margin:0;padding:0}
+.info li{display:grid;grid-template-columns:44px minmax(0,1fr);gap:14px;padding:20px 0;border-bottom:1px solid var(--line)}
+.info li:first-child{padding-top:0}.info li:last-child{border-bottom:0;padding-bottom:0}
+.info li>i{display:grid;place-items:center;width:44px;height:44px;border-radius:12px;background:rgba(227,36,43,.12);color:var(--red)}
+.info li>i svg{width:20px;height:20px}
+.info small{display:block;margin-bottom:6px;font:700 14px/1 var(--f-d);letter-spacing:.14em;text-transform:uppercase;color:var(--fg-3)}
+.info a{text-decoration:none;font-weight:600}.info a:hover{color:var(--red)}
+.hours span{display:flex;justify-content:space-between;gap:12px;font-weight:600}
+.hours em{font-style:normal;color:var(--fg-2);font-weight:500}
+.open-now{display:inline-flex;align-items:center;gap:7px;margin-top:10px;padding:5px 10px;border-radius:999px;font:700 13px/1 var(--f-d);letter-spacing:.1em;text-transform:uppercase;background:rgba(255,255,255,.05);border:1px solid var(--line-2)}
+.open-now::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--fg-3)}
+.open-now.on{color:#4ADE80;border-color:rgba(74,222,128,.35)}.open-now.on::before{background:#4ADE80;box-shadow:0 0 0 4px rgba(74,222,128,.2)}
+/* footer */
+.foot{border-top:1px solid var(--line);padding-block:40px;color:var(--fg-3);font-size:14px}
+.foot .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.foot img{height:44px;width:auto}
+.foot nav{display:flex;gap:6px 24px;flex-wrap:wrap}
+.foot nav a{color:var(--fg-2);text-decoration:none;min-height:44px;display:inline-flex;align-items:center}
+.foot nav a:hover{color:var(--red)}
+.wa-float{position:fixed;right:calc(20px + env(safe-area-inset-right,0px));bottom:calc(20px + env(safe-area-inset-bottom,0px));z-index:70;width:62px;height:62px;border-radius:50%;background:var(--wa);display:grid;place-items:center;box-shadow:0 14px 30px rgba(0,0,0,.45);transition:transform .25s var(--ease),opacity .25s}
+.wa-float::before{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid var(--wa);animation:ping 2.2s ease-out infinite}
+@keyframes ping{from{transform:scale(1);opacity:.8}to{transform:scale(1.5);opacity:0}}
+.wa-float:hover{transform:translateY(-3px) scale(1.04)}
+.wa-float svg{width:32px;height:32px}
+/* reveal */
+.js .rv-up{opacity:0;transform:translateY(26px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.js .rv-up.in{opacity:1;transform:none}
+@media (max-width:1100px){
+.nav,.top .btn-label{display:none}
+.top .btn{margin-left:auto;width:46px;padding:0}
+.menu-btn{display:block}
+.mmenu{position:fixed;inset:0;top:var(--hdr);z-index:49;background:var(--bg);padding:12px var(--g) 40px;flex-direction:column}
+.mmenu.open{display:flex}
+.mmenu a:not(.btn){color:var(--fg);text-decoration:none;font:700 22px/1.2 var(--f-d);letter-spacing:.1em;text-transform:uppercase;padding:18px 0;border-bottom:1px solid var(--line)}
+.mmenu .btn{margin-top:24px}
+.panel{grid-template-columns:repeat(2,minmax(0,1fr))}
+.diffs__grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.diff,.diff:nth-child(4),.diff:nth-child(5){grid-column:span 1}
+.diff:nth-child(5){grid-column:span 2}
+.rv{flex-basis:calc((100% - 16px)/2)}
+}
+@media (max-width:900px){
+.hero__grid,.about__grid,.loc__grid{grid-template-columns:minmax(0,1fr)}
+.hero{min-height:0}
+.hero::before{background:linear-gradient(180deg,rgba(14,18,24,.82),rgba(14,18,24,.9) 45%,var(--bg) 85%)}
+.player{max-width:420px;margin:0 auto;width:100%}
+.sec-head{flex-direction:column;align-items:flex-start}
+.steps__grid{grid-template-columns:1fr}
+.bento{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:190px}
+}
+@media (max-width:640px){
+:root{--hdr:68px}
+body{font-size:16px}
+.brand img{height:40px}
+.hero__grid{padding-block:28px 40px;gap:28px;text-align:center}
+.hero h1{font-size:clamp(42px,12.4vw,54px)}
+.hero .lead{margin:16px auto 0;font-size:16px}
+.eyebrow{justify-content:center}
+.hero__cta{justify-content:center;margin-top:24px}
+.hero__cta .btn{width:100%;white-space:normal;text-align:center;line-height:1.1;padding:12px 18px}
+.lead-card .btn{font-size:18px}
+.ticker span{font-size:20px;padding:13px 18px 13px 0;gap:18px}
+.trust{justify-content:center;margin-top:22px;gap:8px}
+.trust li{font-size:13px;padding:7px 11px 7px 8px}
+.trust li:last-child{display:none}
+.lead-card{text-align:left}
+.lead-card h2{font-size:30px}
+.sec-head,.about__grid>div:last-child,.diffs .wrap>div:first-child,.steps__box>div:first-child,.gallery .wrap>div:first-child,.final__in,.loc .wrap>div:first-child,.reviews .wrap>div:first-child{text-align:center}
+.sec-head{align-items:center}
+.lead,.about__text{margin-left:auto;margin-right:auto}
+.tabs{width:100%}.tabs button{flex:1;justify-content:center;padding:0 10px;font-size:16px}
+.panel{grid-template-columns:1fr}
+.card figure{aspect-ratio:16/11}
+.stats{gap:8px}.stats div{padding:14px 10px;text-align:center}.stats b{font-size:34px}.stats span{font-size:12.5px}
+.about .btn,.steps__cta .btn{width:100%}
+.diffs__grid{grid-template-columns:1fr;gap:12px}
+.diff,.diff:nth-child(5){grid-column:auto;padding:24px}
+.steps__cta{justify-content:center}
+.bento{grid-auto-rows:150px;gap:10px}
+.b-wide{grid-column:span 2}
+.rv{flex-basis:86%}
+.final::after{background:linear-gradient(180deg,rgba(14,18,24,.88),rgba(14,18,24,.94))}
+.map{min-height:360px}
+.map__card .btn{width:100%}
+.foot .wrap{flex-direction:column;text-align:center}
+.foot nav{justify-content:center}
+.wa-float{width:56px;height:56px}
+}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.js .rv-up{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<path id="wa" d="M16 3C8.8 3 3 8.7 3 15.8c0 2.5.7 4.9 2 7L3 29l6.4-2c2 1.1 4.3 1.7 6.6 1.7 7.2 0 13-5.7 13-12.8S23.2 3 16 3Zm0 23.4c-2.1 0-4.1-.6-5.9-1.6l-.4-.3-3.8 1.2 1.2-3.7-.3-.4a10.4 10.4 0 0 1-1.7-5.8C5.1 10 10 5.2 16 5.2S26.9 10 26.9 15.8 22 26.4 16 26.4Zm6-7.8c-.3-.2-1.9-1-2.2-1-.3-.1-.5-.2-.7.2l-1 1.2c-.2.2-.4.2-.7.1a8.8 8.8 0 0 1-4.4-3.8c-.3-.6.3-.5 1-1.8.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9s1.2 3.3 1.4 3.6c.2.2 2.4 3.7 5.9 5.1 2.2.9 3 1 4.1.8.7-.1 1.9-.8 2.2-1.5.3-.8.3-1.4.2-1.5l-.6-.3Z"/>
+<path id="bolt" d="M14 0 2 14h7l-3 10 12-15h-7z"/>
+<symbol id="i-gear" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></symbol>
+<symbol id="i-zap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></symbol>
+<symbol id="i-wrench" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.2L3 17.8V21h3.2l6.3-6.3a4 4 0 0 0 5.2-5.4l-2.6 2.6-2.4-.6-.6-2.4z"/></symbol>
+<symbol id="i-spring" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M12 2v3M12 19v3M7 5h10M7 19h10M8 8l8 2-8 2 8 2-8 2"/></symbol>
+<symbol id="i-disc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/><path d="M12 3a9 9 0 0 1 8.5 6"/></symbol>
+<symbol id="i-chip" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></symbol>
+<symbol id="i-snow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M12 2v20M4.9 4.9l14.2 14.2M2 12h20M4.9 19.1 19.1 4.9M9 3l3 3 3-3M9 21l3-3 3 3"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="m5 12 5 5 9-10"/></symbol>
+<symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+<symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+<symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+<symbol id="i-user" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></symbol>
+<symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></symbol>
+<symbol id="i-car" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M5 17h14v-5l-2-5H7l-2 5z"/><path d="M3 12h18"/><circle cx="7.5" cy="17.5" r="1.5"/><circle cx="16.5" cy="17.5" r="1.5"/></symbol>
+<symbol id="i-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></symbol>
+<symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M12 3 4 6v6c0 4.5 3.4 8.2 8 9 4.6-.8 8-4.5 8-9V6z"/><path d="m9 12 2 2 4-4"/></symbol>
+<symbol id="i-handshake" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="m11 17 2 2a1 1 0 0 0 3-3"/><path d="m14 14 2.5 2.5a1 1 0 0 0 3-3l-3.9-3.9a2 2 0 0 0-2.8 0l-.9.9a1.5 1.5 0 0 1-2.1-2.1L12.6 5.6a4 4 0 0 1 5.3-.3L21 7.6"/><path d="m21 3 1 11h-2M3 3 2 14l6.5 6.5a1 1 0 0 0 3-3M3 4h8"/></symbol>
+<symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></symbol>
+<symbol id="i-layers" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="m12 2 10 5-10 5L2 7z"/><path d="m2 17 10 5 10-5M2 12l10 5 10-5"/></symbol>
+</defs></svg>
+
+<header class="top" id="top">
+<div class="wrap">
+<a class="brand" href="#inicio" aria-label="Mecânica Avancini, início"><img src="img/logo.png" alt="Mecânica Avancini" width="480" height="164"></a>
+<nav class="nav" aria-label="Principal"><a href="#servicos">Serviços</a><a href="#sobre">Sobre</a><a href="#diferenciais">Diferenciais</a><a href="#galeria">Galeria</a><a href="#contato">Contato</a></nav>
+<a class="btn" href="#agendar" data-goform aria-label="Agendar avaliação"><svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><use href="#wa"/></svg><span class="btn-label">Agendar avaliação</span></a>
+<button class="menu-btn" type="button" aria-expanded="false" aria-controls="mmenu" aria-label="Abrir menu"><span></span><span></span></button>
+</div>
+</header>
+<nav class="mmenu" id="mmenu" aria-label="Menu"><a href="#servicos">Serviços</a><a href="#sobre">Sobre</a><a href="#diferenciais">Diferenciais</a><a href="#galeria">Galeria</a><a href="#contato">Contato</a><a class="btn" href="#agendar" data-goform>Agendar avaliação</a></nav>
+
+<main id="conteudo">
+<section class="hero" id="inicio">
+<div class="hero__bg"><img src="img/oficina3.webp" alt="" fetchpriority="high"></div>
+<div class="wrap hero__grid">
+<div>
+<p class="eyebrow" data-in="1"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-pin"/></svg>Oficina em Joinville - SC</p>
+<h1 data-in="2">Seu carro precisa de manutenção? Conte com a <em>Avancini!</em></h1>
+<p class="lead" data-in="3">Mecânica geral, elétrica automotiva, suspensão, freios, injeção eletrônica e ar-condicionado em Joinville. Tudo o que seu carro precisa em um só lugar!</p>
+<div class="hero__cta" data-in="4">
+<a class="btn" href="#agendar" data-goform><svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><use href="#wa"/></svg>Agendar avaliação pelo WhatsApp</a>
+</div>
+<ul class="trust" data-in="5">
+<li><svg aria-hidden="true"><use href="#i-gear"/></svg>Mecânica</li>
+<li><svg aria-hidden="true"><use href="#i-zap"/></svg>Elétrica</li>
+<li><svg aria-hidden="true"><use href="#i-snow"/></svg>Ar-condicionado</li>
+<li><svg aria-hidden="true"><use href="#i-shield"/></svg>Diagnóstico responsável</li>
+</ul>
+</div>
+
+<form class="lead-card" id="agendar" novalidate data-in="3" aria-labelledby="form-t">
+<h2 id="form-t">Agende sua <em>avaliação</em></h2>
+<p>Preencha em 10 segundos. A mensagem já chega pronta no nosso WhatsApp.</p>
+<label class="field" id="f-nome"><span>Nome <b>*</b></span>
+<span class="ctrl"><svg aria-hidden="true"><use href="#i-user"/></svg><input name="nome" type="text" autocomplete="name" placeholder="Seu nome" required maxlength="60"></span>
+<span class="msg">Digite seu nome.</span></label>
+<label class="field" id="f-cel"><span>Celular <b>*</b></span>
+<span class="ctrl"><svg aria-hidden="true"><use href="#i-phone"/></svg><input name="celular" type="tel" inputmode="numeric" autocomplete="tel-national" placeholder="(47) 99999-9999" required maxlength="16"></span>
+<span class="msg">Digite um celular válido com DDD.</span></label>
+<label class="field" id="f-tipo"><span>Tipo de problema <b>*</b></span>
+<span class="ctrl"><svg aria-hidden="true"><use href="#i-car"/></svg><select name="tipo" required>
+<option value="" disabled selected>Selecione o serviço</option>
+<optgroup label="Mecânica">
+<option>Mecânica geral</option>
+<option>Suspensão automotiva</option>
+<option>Sistema de freios</option>
+</optgroup>
+<optgroup label="Elétrica e conforto">
+<option>Elétrica automotiva</option>
+<option>Injeção eletrônica</option>
+<option>Ar-condicionado automotivo</option>
+</optgroup>
+<option>Não sei / preciso de diagnóstico</option>
+</select></span>
+<span class="msg">Escolha o tipo de problema.</span></label>
+<button class="btn btn--wa" type="submit"><svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><use href="#wa"/></svg>Enviar pelo WhatsApp</button>
+<p class="note"><svg aria-hidden="true"><use href="#i-lock"/></svg>Seus dados vão só para a Avancini. Sem spam.</p>
+</form>
+</div>
+</section>
+
+<div class="ticker" aria-hidden="true"><div class="ticker__in">
+<span>Mecânica geral<svg viewBox="0 0 18 24"><use href="#bolt"/></svg></span><span>Suspensão<svg viewBox="0 0 18 24"><use href="#bolt"/></svg></span><span>Freios<svg viewBox="0 0 18 24"><use href="#bolt"/></svg></span><span>Elétrica automotiva<svg viewBox="0 0 18 24"><use href="#bolt"/></svg></span><span>Injeção eletrônica<svg viewBox="0 0 18 24"><use href="#bolt"/></svg></span><span>Ar-condicionado<svg viewBox="0 0 18 24"><use href="#bolt"/></svg></span>
+<span>Mecânica geral<svg viewBox="0 0 18 24"><use href="#bolt"/></svg></span><span>Suspensão<svg viewBox="0 0 18 24"><use href="#bolt"/></svg></span><span>Freios<svg viewBox="0 0 18 24"><use href="#bolt"/></svg></span><span>Elétrica automotiva<svg viewBox="0 0 18 24"><use href="#bolt"/></svg></span><span>Injeção eletrônica<svg viewBox="0 0 18 24"><use href="#bolt"/></svg></span><span>Ar-condicionado<svg viewBox="0 0 18 24"><use href="#bolt"/></svg></span>
+</div></div>
+
+<section class="services" id="servicos" aria-labelledby="serv-t">
+<div class="wrap">
+<div class="sec-head rv-up">
+<div><p class="eyebrow"><svg aria-hidden="true"><use href="#i-wrench"/></svg>Serviços</p><h2 class="h2" id="serv-t">Tudo o que seu carro precisa <em>em um só lugar</em></h2></div>
+<div class="tabs" role="tablist" aria-label="Tipo de serviço">
+<button type="button" role="tab" id="tab-mec" aria-controls="p-mec" aria-selected="true"><svg aria-hidden="true"><use href="#i-gear"/></svg>Mecânica</button>
+<button type="button" role="tab" id="tab-ele" aria-controls="p-ele" aria-selected="false" tabindex="-1"><svg aria-hidden="true"><use href="#i-zap"/></svg>Elétrica e ar</button>
+</div>
+</div>
+<div class="panel show" id="p-mec" role="tabpanel" aria-labelledby="tab-mec">
+<article class="card"><figure><span class="card__ico"><svg aria-hidden="true"><use href="#i-gear"/></svg></span><img src="img/motor.webp" alt="Motor sendo montado na oficina Avancini" loading="lazy" style="object-position:50% 45%"></figure><div class="card__body"><h3>Mecânica geral</h3><p>Manutenção preventiva e corretiva de motor, correias, vazamentos e revisões completas.</p><ul><li>Motor</li><li>Revisão</li><li>Troca de óleo</li></ul><button class="pick" type="button" data-pick="Mecânica geral">Quero orçamento <svg aria-hidden="true"><use href="#i-arrow"/></svg></button></div></article>
+<article class="card"><figure><span class="card__ico"><svg aria-hidden="true"><use href="#i-spring"/></svg></span><img src="img/suspensao.webp" alt="Mecânico trabalhando embaixo do carro no elevador" loading="lazy" style="object-position:50% 35%"></figure><div class="card__body"><h3>Suspensão automotiva</h3><p>Amortecedores, molas, bandejas e buchas para um carro firme, estável e confortável.</p><ul><li>Amortecedores</li><li>Barulhos</li><li>Buchas</li></ul><button class="pick" type="button" data-pick="Suspensão automotiva">Quero orçamento <svg aria-hidden="true"><use href="#i-arrow"/></svg></button></div></article>
+<article class="card"><figure><span class="card__ico"><svg aria-hidden="true"><use href="#i-disc"/></svg></span><img src="img/freios.webp" alt="Mecânico revisando o disco de freio" loading="lazy" style="object-position:50% 30%"></figure><div class="card__body"><h3>Sistema de freios</h3><p>Pastilhas, discos, fluido e revisão completa para frear com segurança.</p><ul><li>Pastilhas</li><li>Discos</li><li>Fluido</li></ul><button class="pick" type="button" data-pick="Sistema de freios">Quero orçamento <svg aria-hidden="true"><use href="#i-arrow"/></svg></button></div></article>
+</div>
+<div class="panel" id="p-ele" role="tabpanel" aria-labelledby="tab-ele" hidden>
+<article class="card"><figure><span class="card__ico"><svg aria-hidden="true"><use href="#i-zap"/></svg></span><img src="img/eletrica.webp" alt="Equipe da Avancini avaliando um carro na oficina" loading="lazy" style="object-position:60% 40%"></figure><div class="card__body"><h3>Elétrica automotiva</h3><p>Bateria, alternador, motor de partida, iluminação e falhas elétricas em geral.</p><ul><li>Bateria</li><li>Alternador</li><li>Partida</li></ul><button class="pick" type="button" data-pick="Elétrica automotiva">Quero orçamento <svg aria-hidden="true"><use href="#i-arrow"/></svg></button></div></article>
+<article class="card"><figure><span class="card__ico"><svg aria-hidden="true"><use href="#i-chip"/></svg></span><img src="img/injecao.webp" alt="Motor aberto durante manutenção" loading="lazy" style="object-position:50% 50%"></figure><div class="card__body"><h3>Injeção eletrônica</h3><p>Diagnóstico com scanner, limpeza de bicos e correção de falhas e luz de injeção acesa.</p><ul><li>Scanner</li><li>Bicos</li><li>Luz acesa</li></ul><button class="pick" type="button" data-pick="Injeção eletrônica">Quero orçamento <svg aria-hidden="true"><use href="#i-arrow"/></svg></button></div></article>
+<article class="card"><figure><span class="card__ico"><svg aria-hidden="true"><use href="#i-snow"/></svg></span><img src="img/oficina3.webp" alt="Carros em manutenção na oficina" loading="lazy" style="object-position:50% 60%"></figure><div class="card__body"><h3>Ar-condicionado automotivo</h3><p>Higienização, recarga de gás e reparo para o ar gelar de novo.</p><ul><li>Recarga</li><li>Higienização</li><li>Reparo</li></ul><button class="pick" type="button" data-pick="Ar-condicionado automotivo">Quero orçamento <svg aria-hidden="true"><use href="#i-arrow"/></svg></button></div></article>
+</div>
+<p class="no-cambio rv-up"><svg aria-hidden="true"><use href="#i-check"/></svg>Não trabalhamos com câmbio automático.</p>
+</div>
+</section>
+
+<section class="about" id="sobre" aria-labelledby="sobre-t">
+<div class="wrap about__grid">
+<figure class="player rv-up" id="player">
+<video src="media/oficina.mp4" poster="img/equipe.webp" playsinline preload="none" controls aria-label="Vídeo da equipe Avancini trabalhando na oficina"></video>
+<button class="player__play" type="button" aria-label="Assistir ao vídeo da oficina"><i><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l13-7.5z"/></svg></i>Conheça a oficina</button>
+</figure>
+<div class="rv-up">
+<p class="eyebrow"><svg aria-hidden="true"><use href="#i-zap"/></svg>Sobre a Avancini</p>
+<h2 class="h2" id="sobre-t">Mecânica, elétrica e ar <em>sob o mesmo teto</em></h2>
+<div class="about__text">
+<p>A <strong>Avancini</strong> abriu as portas em agosto de 2025, na Vila Nova, em Joinville, com uma ideia simples: o motorista não precisa rodar a cidade atrás de uma oficina para cada problema.</p>
+<p>Aqui você resolve <strong>mecânica, elétrica e ar-condicionado no mesmo lugar</strong>, com atendimento próximo, diagnóstico responsável e a confiança de saber exatamente o que está sendo feito no seu carro.</p>
+</div>
+<div class="stats">
+<div><b>3<em>em</em>1</b><span>mecânica, elétrica e ar-condicionado</span></div>
+<div><b>6</b><span>especialidades na mesma oficina</span></div>
+<div><b>2025</b><span>atendendo Joinville desde agosto</span></div>
+</div>
+<a class="btn" href="#agendar" data-goform><svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><use href="#wa"/></svg>Agendar avaliação</a>
+</div>
+</div>
+</section>
+
+<section class="diffs" id="diferenciais" aria-labelledby="dif-t">
+<div class="wrap">
+<div class="rv-up"><p class="eyebrow"><svg aria-hidden="true"><use href="#i-shield"/></svg>Diferenciais</p><h2 class="h2" id="dif-t">Por que escolher <em>a Avancini</em></h2></div>
+<div class="diffs__grid">
+<article class="diff rv-up" data-n="01"><i><svg aria-hidden="true"><use href="#i-layers"/></svg></i><h3>Tudo em um só lugar</h3><p>Mecânica, elétrica e ar-condicionado na mesma oficina. Um só atendimento, um só lugar.</p></article>
+<article class="diff rv-up" data-n="02"><i><svg aria-hidden="true"><use href="#i-handshake"/></svg></i><h3>Atendimento personalizado</h3><p>Você fala direto com quem cuida do seu carro e acompanha cada etapa do serviço.</p></article>
+<article class="diff rv-up" data-n="03"><i><svg aria-hidden="true"><use href="#i-search"/></svg></i><h3>Diagnóstico responsável</h3><p>Primeiro entendemos o problema, depois explicamos e só então executamos. Sem troca de peça no chute.</p></article>
+<article class="diff rv-up" data-n="04"><i><svg aria-hidden="true"><use href="#i-clock"/></svg></i><h3>Praticidade e comodidade</h3><p>Agende pelo WhatsApp, deixe o carro e resolva tudo de uma vez, sem perder o seu dia.</p></article>
+<article class="diff rv-up" data-n="05"><i><svg aria-hidden="true"><use href="#i-pin"/></svg></i><h3>Localizada em Joinville</h3><p>Na Vila Nova, com estrutura ampla, elevadores e espaço para receber o seu carro.</p></article>
+</div>
+</div>
+</section>
+
+<section class="steps" aria-labelledby="steps-t">
+<div class="wrap"><div class="steps__box rv-up">
+<div><p class="eyebrow"><svg aria-hidden="true"><use href="#i-check"/></svg>Como funciona</p><h2 class="h2" id="steps-t">Do WhatsApp ao carro pronto <em>em 3 passos</em></h2></div>
+<div class="steps__grid">
+<div class="step"><h3>Preencha o formulário</h3><p>Nome, celular e o tipo de problema. Leva menos de 10 segundos.</p></div>
+<div class="step"><h3>Fale com a gente</h3><p>A mensagem chega pronta no nosso WhatsApp e já combinamos o melhor horário.</p></div>
+<div class="step"><h3>Traga seu carro</h3><p>Fazemos o diagnóstico, explicamos o que precisa e só executamos com o seu ok.</p></div>
+</div>
+<div class="steps__cta"><a class="btn" href="#agendar" data-goform><svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><use href="#wa"/></svg>Começar agora</a></div>
+</div></div>
+</section>
+
+<section class="gallery" id="galeria" aria-labelledby="gal-t">
+<div class="wrap">
+<div class="rv-up"><p class="eyebrow"><svg aria-hidden="true"><use href="#i-car"/></svg>Galeria</p><h2 class="h2" id="gal-t">Conheça <em>nossa estrutura</em></h2></div>
+<div class="bento rv-up" id="bento">
+<figure class="b-wide b-tall"><img src="img/fachada.webp" alt="Fachada e pátio da oficina Avancini" loading="lazy"><figcaption>Nossa oficina</figcaption></figure>
+<figure class="b-tall"><video src="media/motor-loop.mp4" muted loop playsinline autoplay preload="none" aria-label="Montagem de motor na oficina"></video><figcaption>Motor</figcaption></figure>
+<figure><img src="img/oficina1.webp" alt="Carros nos elevadores da oficina" loading="lazy"></figure>
+<figure><img src="img/cabecote.webp" alt="Cabeçote em manutenção" loading="lazy"></figure>
+<figure class="b-wide"><img src="img/oficina2.webp" alt="Área de serviço com vários elevadores" loading="lazy" style="object-position:50% 60%"><figcaption>Estrutura ampla</figcaption></figure>
+<figure><img src="img/bancada.webp" alt="Mecânico separando peças na bancada" loading="lazy"></figure>
+<figure><img src="img/oficina4.webp" alt="Carros em manutenção na oficina" loading="lazy"></figure>
+</div>
+</div>
+</section>
+
+<section class="reviews" id="avaliacoes" aria-labelledby="rev-t" hidden>
+<div class="wrap">
+<div><p class="eyebrow">Avaliações</p><h2 class="h2" id="rev-t">O que dizem <em>nossos clientes</em></h2></div>
+<div class="rv-track" id="rvtrack"></div>
+</div>
+</section>
+
+<section class="final" aria-labelledby="final-t">
+<video src="media/hero-loop.mp4" muted loop playsinline autoplay preload="none" poster="img/equipe.webp" aria-hidden="true"></video>
+<div class="wrap"><div class="final__in rv-up">
+<p class="eyebrow"><svg aria-hidden="true"><use href="#i-zap"/></svg>Avaliação sem compromisso</p>
+<h2 class="h2" id="final-t">Não deixe o problema <em>virar prejuízo</em></h2>
+<p class="lead">Um barulho, uma luz acesa no painel ou o ar que não gela: quanto antes avaliar, mais barato fica. Agende agora pelo WhatsApp.</p>
+<div class="hero__cta"><a class="btn" href="#agendar" data-goform><svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><use href="#wa"/></svg>Agendar avaliação</a><a class="btn btn--ghost" href="#contato">Ver localização</a></div>
+</div></div>
+</section>
+
+<section class="loc" id="contato" aria-labelledby="loc-t">
+<div class="wrap">
+<div class="rv-up"><p class="eyebrow"><svg aria-hidden="true"><use href="#i-pin"/></svg>Localização e contato</p><h2 class="h2" id="loc-t">Venha <em>nos visitar</em></h2></div>
+<div class="loc__grid">
+<div class="map rv-up" id="map" data-src="https://www.google.com/maps?q=Rua%20Paulino%20de%20Jesus%2C%20119%2C%20Vila%20Nova%2C%20Joinville%20-%20SC&output=embed">
+<div class="map__fb"><img src="img/fachada.webp" alt="Oficina Avancini" loading="lazy"></div>
+<div class="map__card"><div><b>Rua Paulino de Jesus, 119</b><span>Vila Nova, Joinville - SC</span></div><a class="btn" href="https://www.google.com/maps/dir/?api=1&destination=Rua%20Paulino%20de%20Jesus%2C%20119%2C%20Vila%20Nova%2C%20Joinville%20-%20SC" target="_blank" rel="noopener">Traçar rota</a></div>
+</div>
+<div class="info rv-up">
+<ul>
+<li><i><svg aria-hidden="true"><use href="#i-pin"/></svg></i><div><small>Endereço</small><a href="https://www.google.com/maps/dir/?api=1&destination=Rua%20Paulino%20de%20Jesus%2C%20119%2C%20Vila%20Nova%2C%20Joinville%20-%20SC" target="_blank" rel="noopener">Rua Paulino de Jesus, 119 - Vila Nova, Joinville - SC</a></div></li>
+<li><i><svg aria-hidden="true"><use href="#i-clock"/></svg></i><div><small>Horário</small><div class="hours"><span>Segunda a sexta</span><span><em>08h às 12h · 13h30 às 18h</em></span><span>Sábado e domingo <em>Fechado</em></span></div><span class="open-now" id="opennow">Fechado agora</span></div></li>
+<li><i><svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><use href="#wa"/></svg></i><div><small>WhatsApp</small><a data-wa="contato" href="#">(47) 9112-6813</a></div></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+</main>
+
+<footer class="foot">
+<div class="wrap">
+<img src="img/logo.png" alt="Mecânica Avancini" width="480" height="164" loading="lazy">
+<nav aria-label="Rodapé"><a href="#servicos">Serviços</a><a href="#sobre">Sobre</a><a href="#galeria">Galeria</a><a href="#contato">Contato</a></nav>
+<span>© 2026 Mecânica Avancini · Joinville - SC</span>
+</div>
+</footer>
+<a class="wa-float" data-wa="flutuante" href="#" target="_blank" rel="noopener" aria-label="Falar no WhatsApp"><svg viewBox="0 0 32 32" fill="#fff" aria-hidden="true"><use href="#wa"/></svg></a>
+<div class="lb" id="lb" role="dialog" aria-label="Foto ampliada"><button type="button" aria-label="Fechar">×</button><img alt=""></div>
+
+<script>
+(function(){
+var NUM="554791126813";
+function waURL(t){return "https://wa.me/"+NUM+"?text="+encodeURIComponent(t);}
+function track(ev,data){dataLayer.push(Object.assign({event:ev},window.ATTR||{},data||{}));var T=window.TRACK||{};
+ if(T.ga4Id&&window.gtag)gtag("event",ev,data||{});
+ if(T.adsId&&T.adsLabel&&window.gtag)gtag("event","conversion",{send_to:T.adsId+"/"+T.adsLabel});
+ if(window.fbq)fbq("track",ev==="generate_lead"?"Lead":"Contact",data||{});}
+/* WhatsApp direto (botão flutuante e contato) */
+var GERAL="Olá! Vim pelo site da Avancini e gostaria de agendar uma avaliação para o meu carro.";
+document.querySelectorAll("[data-wa]").forEach(function(a){a.href=waURL(GERAL);a.target="_blank";a.rel="noopener";
+ a.addEventListener("click",function(){track("whatsapp_click",{posicao:a.dataset.wa});});});
+/* header + menu */
+var top=document.getElementById("top");function hdr(){top.classList.toggle("solid",scrollY>30||document.body.classList.contains("mo"));}
+hdr();addEventListener("scroll",hdr,{passive:true});
+var mb=document.querySelector(".menu-btn"),mm=document.getElementById("mmenu");
+function setM(o){mb.setAttribute("aria-expanded",o);mm.classList.toggle("open",o);document.body.classList.toggle("mo",o);hdr();}
+mb.addEventListener("click",function(){setM(mb.getAttribute("aria-expanded")!=="true");});
+mm.addEventListener("click",function(e){if(e.target.closest("a"))setM(false);});
+/* form */
+var form=document.getElementById("agendar"),nome=form.nome,cel=form.celular,tipo=form.tipo;
+function goForm(service){if(service){tipo.value=service;tipo.closest(".field").classList.remove("err");}
+ form.scrollIntoView({behavior:"smooth",block:"center"});form.classList.remove("flash");void form.offsetWidth;form.classList.add("flash");
+ setTimeout(function(){(nome.value?(cel.value?tipo:cel):nome).focus({preventScroll:true});},550);}
+document.querySelectorAll("[data-goform]").forEach(function(a){a.addEventListener("click",function(e){e.preventDefault();setM(false);goForm();});});
+document.querySelectorAll("[data-pick]").forEach(function(b){b.addEventListener("click",function(){track("select_service",{servico:b.dataset.pick});goForm(b.dataset.pick);});});
+cel.addEventListener("input",function(){var d=cel.value.replace(/\D/g,"").slice(0,11),o="";
+ if(d.length>0)o="("+d.slice(0,2);if(d.length>=3)o+=") "+d.slice(2,d.length>10?7:6);if(d.length>=7)o+="-"+d.slice(d.length>10?7:6);cel.value=o;});
+function valid(){var ok=true;
+ [[nome,nome.value.trim().length>=2],[cel,/^\d{10,11}$/.test(cel.value.replace(/\D/g,""))],[tipo,!!tipo.value]].forEach(function(p){p[0].closest(".field").classList.toggle("err",!p[1]);if(!p[1]&&ok){p[0].focus();ok=false;}});return ok;}
+[nome,cel,tipo].forEach(function(el){el.addEventListener(el.tagName==="SELECT"?"change":"input",function(){el.closest(".field").classList.remove("err");});});
+form.addEventListener("submit",function(e){e.preventDefault();if(!valid())return;
+ var t="Olá! Vim pelo site e gostaria de agendar uma avaliação.\n\n*Nome:* "+nome.value.trim()+"\n*Celular:* "+cel.value+"\n*Tipo de problema:* "+tipo.value;
+ track("generate_lead",{servico:tipo.value});
+ window.open(waURL(t),"_blank")||(location.href=waURL(t));});
+/* tabs */
+var tabs=[].slice.call(document.querySelectorAll('[role="tab"]'));
+function sel(t){tabs.forEach(function(x){var on=x===t;x.setAttribute("aria-selected",on);x.tabIndex=on?0:-1;var p=document.getElementById(x.getAttribute("aria-controls"));p.hidden=!on;p.classList.toggle("show",on);});}
+tabs.forEach(function(t,i){t.addEventListener("click",function(){sel(t);});t.addEventListener("keydown",function(e){if(e.key==="ArrowRight"||e.key==="ArrowLeft"){var n=tabs[(i+(e.key==="ArrowRight"?1:tabs.length-1))%tabs.length];sel(n);n.focus();}});});
+/* video */
+var pl=document.getElementById("player"),v=pl.querySelector("video");
+pl.querySelector(".player__play").addEventListener("click",function(){pl.classList.add("playing");v.play();});
+v.addEventListener("play",function(){pl.classList.add("playing");});
+var rm=matchMedia("(prefers-reduced-motion: reduce)").matches;
+/* reveal + lazy autoplay */
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);}});},{rootMargin:"0px 0px -8% 0px"});
+document.querySelectorAll(".rv-up").forEach(function(el){io.observe(el);});
+var vio=new IntersectionObserver(function(es){es.forEach(function(e){var x=e.target;if(e.isIntersecting&&!rm){x.preload="auto";x.play().catch(function(){});}else x.pause();});});
+document.querySelectorAll("video[autoplay]").forEach(function(x){x.removeAttribute("autoplay");vio.observe(x);});
+/* lightbox */
+var lb=document.getElementById("lb"),li=lb.querySelector("img");
+document.getElementById("bento").addEventListener("click",function(e){var im=e.target.closest("figure");if(!im)return;var i=im.querySelector("img");if(!i)return;li.src=i.src;li.alt=i.alt;lb.classList.add("open");});
+lb.addEventListener("click",function(e){if(e.target!==li)lb.classList.remove("open");});
+addEventListener("keydown",function(e){if(e.key==="Escape")lb.classList.remove("open");});
+/* aberto agora (horário de Joinville) */
+try{var p=new Intl.DateTimeFormat("en-US",{timeZone:"America/Sao_Paulo",weekday:"short",hour:"numeric",minute:"numeric",hour12:false}).formatToParts(new Date()),o={};p.forEach(function(x){o[x.type]=x.value;});
+ var m=(+o.hour%24)*60+(+o.minute),wd=["Mon","Tue","Wed","Thu","Fri"].indexOf(o.weekday)>-1,on=wd&&((m>=480&&m<720)||(m>=810&&m<1080)),el=document.getElementById("opennow");
+ el.textContent=on?"Aberto agora":"Fechado agora";el.classList.toggle("on",on);}catch(e){}
+/* map */
+var map=document.getElementById("map");
+if(window.self===window.top){var f=document.createElement("iframe");f.src=map.dataset.src;f.title="Mapa da Mecânica Avancini";f.loading="lazy";f.referrerPolicy="no-referrer-when-downgrade";map.appendChild(f);}
+/* avaliações reais do Google: {t:"texto", n:"Nome"} — a seção só aparece quando houver itens */
+var REVIEWS=[];
+if(REVIEWS.length){var sec=document.getElementById("avaliacoes"),tr=document.getElementById("rvtrack");sec.hidden=false;
+ REVIEWS.forEach(function(r){var a=document.createElement("article");a.className="rv";a.innerHTML='<div class="st">★★★★★</div><p></p><footer><i></i><span></span></footer>';a.querySelector("p").textContent=r.t;a.querySelector("span").textContent=r.n;a.querySelector("i").textContent=r.n.charAt(0);tr.appendChild(a);});}
+})();
+</script>
+</body>
+</html>
