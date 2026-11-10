@@ -1,0 +1,50 @@
+name: Publicar na Vercel
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      pasta:
+        description: "Pasta do cliente (vazio = todas)"
+        required: false
+concurrency: deploy
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+      SCOPE: bk-24fb
+      # projetos ligados direto ao Git na Vercel (publicam sozinhos)
+      IGNORAR: "mecanica-do-valle"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - name: Descobrir pastas alteradas
+        id: pastas
+        run: |
+          if [ -n "${{ github.event.inputs.pasta }}" ]; then
+            P="${{ github.event.inputs.pasta }}"
+          elif [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            P=$(find . -maxdepth 2 -mindepth 2 -name index.html -printf '%h\n' | sed 's|^\./||')
+          else
+            P=$(git diff --name-only HEAD^ HEAD | grep '/' | cut -d/ -f1 | sort -u | grep -v '^\.' || true)
+          fi
+          L=""
+          for d in $P; do
+            [ -f "$d/index.html" ] || continue
+            case " $IGNORAR " in *" $d "*) continue;; esac
+            L="$L $d"
+          done
+          echo "lista=$L" >> "$GITHUB_OUTPUT"
+          echo "Pastas: $L"
+      - name: Publicar
+        if: steps.pastas.outputs.lista != ''
+        run: |
+          npm i -g vercel@latest >/dev/null 2>&1
+          for d in ${{ steps.pastas.outputs.lista }}; do
+            echo "=== $d"
+            vercel project add "$d" --token "$VERCEL_TOKEN" --scope "$SCOPE" >/dev/null 2>&1 || true
+            (cd "$d" && vercel link --yes --project "$d" --token "$VERCEL_TOKEN" --scope "$SCOPE" >/dev/null \
+              && vercel deploy --prod --yes --token "$VERCEL_TOKEN" --scope "$SCOPE")
+          done
