@@ -171,10 +171,13 @@ button,input,select{font:inherit;color:inherit}
 .no-cambio svg{width:16px;height:16px}
 /* about */
 .about{padding-block:var(--sec);background:var(--bg-2);border-block:1px solid var(--line)}
-.about__grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(40px,6vw,96px);align-items:center}
+.about__grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(40px,6vw,96px);align-items:stretch}
+.about__grid>div:last-child{display:flex;flex-direction:column;justify-content:space-between}
+.about__grid>div:last-child .btn{align-self:flex-start}
+.player video{cursor:pointer}
 .player{position:relative;margin:0;aspect-ratio:9/16;max-height:720px;border-radius:24px;overflow:hidden;background:var(--bg-3);border:1px solid var(--line-2)}
 .player video{width:100%;height:100%;object-fit:cover}
-.player__play{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:14px;padding:28px;border:0;cursor:pointer;color:#fff;background:linear-gradient(180deg,rgba(14,18,24,0) 40%,rgba(14,18,24,.9));font:700 17px/1 var(--f-d);letter-spacing:.18em;text-transform:uppercase}
+.player__play{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:28px;border:0;cursor:pointer;color:#fff;background:radial-gradient(circle at 50% 50%,rgba(14,18,24,.15),rgba(14,18,24,.55));font:700 17px/1 var(--f-d);letter-spacing:.18em;text-transform:uppercase}
 .player__play i{display:grid;place-items:center;width:78px;height:78px;border-radius:50%;background:var(--red);box-shadow:0 0 0 10px rgba(227,36,43,.2);animation:ring 2.4s ease-in-out infinite}
 @keyframes ring{50%{box-shadow:0 0 0 18px rgba(227,36,43,0)}}
 .player__play svg{width:28px;height:28px;margin-left:4px}
@@ -323,6 +326,7 @@ body{font-size:16px}
 .card figure{aspect-ratio:16/11}
 .stats{gap:8px}.stats div{padding:14px 10px;text-align:center}.stats b{font-size:34px}.stats span{font-size:12.5px}
 .about .btn,.steps__cta .btn{width:100%}
+.about__grid>div:last-child .btn{align-self:stretch}
 .diffs__grid{grid-template-columns:1fr;gap:12px}
 .diff,.diff:nth-child(5){grid-column:auto;padding:24px}
 .steps__cta{justify-content:center}
@@ -383,9 +387,6 @@ body{font-size:16px}
 <p class="eyebrow" data-in="1"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-pin"/></svg>Oficina em Joinville - SC</p>
 <h1 data-in="2">Seu carro precisa de manutenção? Conte com a <em>Avancini!</em></h1>
 <p class="lead" data-in="3">Mecânica geral, elétrica automotiva, suspensão, freios, injeção eletrônica e ar-condicionado em Joinville. Tudo o que seu carro precisa em um só lugar!</p>
-<div class="hero__cta" data-in="4">
-<a class="btn" href="#agendar" data-goform><svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><use href="#wa"/></svg>Agendar avaliação pelo WhatsApp</a>
-</div>
 <ul class="trust" data-in="5">
 <li><svg aria-hidden="true"><use href="#i-gear"/></svg>Mecânica</li>
 <li><svg aria-hidden="true"><use href="#i-zap"/></svg>Elétrica</li>
@@ -456,7 +457,7 @@ body{font-size:16px}
 <section class="about" id="sobre" aria-labelledby="sobre-t">
 <div class="wrap about__grid">
 <figure class="player rv-up" id="player">
-<video src="media/oficina.mp4" poster="img/equipe.webp" playsinline preload="none" controls aria-label="Vídeo da equipe Avancini trabalhando na oficina"></video>
+<video src="media/oficina.mp4" poster="img/equipe.webp" playsinline preload="none" aria-label="Vídeo da equipe Avancini trabalhando na oficina"></video>
 <button class="player__play" type="button" aria-label="Assistir ao vídeo da oficina"><i><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l13-7.5z"/></svg></i>Conheça a oficina</button>
 </figure>
 <div class="rv-up">
@@ -605,7 +606,7 @@ tabs.forEach(function(t,i){t.addEventListener("click",function(){sel(t);});t.add
 /* video */
 var pl=document.getElementById("player"),v=pl.querySelector("video");
 pl.querySelector(".player__play").addEventListener("click",function(){pl.classList.add("playing");v.play();});
-v.addEventListener("play",function(){pl.classList.add("playing");});
+v.addEventListener("play",function(){pl.classList.add("playing");});v.addEventListener("click",function(){v.paused?v.play():v.pause();});v.addEventListener("pause",function(){pl.classList.remove("playing");});v.addEventListener("ended",function(){pl.classList.remove("playing");});
 var rm=matchMedia("(prefers-reduced-motion: reduce)").matches;
 /* reveal + lazy autoplay */
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);}});},{rootMargin:"0px 0px -8% 0px"});
