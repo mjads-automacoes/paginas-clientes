@@ -1,0 +1,28 @@
+name: Baixar imagens externas
+on:
+  workflow_dispatch:
+    inputs:
+      pasta:
+        required: true
+permissions:
+  contents: write
+jobs:
+  baixar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Baixar e trocar links por arquivos locais
+        run: |
+          d="${{ github.event.inputs.pasta }}"
+          mkdir -p "$d/img"
+          grep -oE 'https://images\.unsplash\.com/photo-[^"]+' "$d/index.html" | sort -u | while read u; do
+            id=$(echo "$u" | sed -E 's#.*/photo-([0-9a-f-]+)\?.*#\1#'); w=$(echo "$u" | sed -nE 's#.*[?&]w=([0-9]+).*#\1#p')
+            f="img/u-$id-$w.jpg"
+            curl -sSfL "${u//&amp;/&}" -o "$d/$f"
+            python3 - "$d/index.html" "$u" "$f" <<'PY'
+          import sys;p,u,f=sys.argv[1:];s=open(p).read().replace(u,f);open(p,'w').write(s)
+          PY
+          done
+          sed -i '/<link rel="preconnect" href="https:\/\/images.unsplash.com">/d' "$d/index.html"
+          git config user.name "github-actions"; git config user.email "actions@github.com"
+          git add -A && git commit -m "$d: imagens salvas localmente" && git push
